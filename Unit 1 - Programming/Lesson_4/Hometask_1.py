@@ -1,0 +1,95 @@
+import codecs
+clients = codecs.open('clients.txt', 'r', 'utf-8')
+courses = codecs.open('catalog.txt', 'r', 'utf-8')
+
+import math
+from random import randint
+
+class COURSE:
+    def __init__(self, subject="Сareer guidance", price=int(4500), tutor="Igor A.", pupils=list()):
+        self.subject=subject
+        self.price = price
+        self.tutor = tutor
+        self._pupils = pupils
+        self.number = len(self._pupils)
+
+    def info(self):
+        print("Course: " + "\t\t" + self.subject)
+        print("Tutor: " + "\t\t\t" + self.tutor)
+        print("Number of pupils: " + "\t" , self.number)
+        print("Price: " , self.price)
+
+    def _sp_info(self):
+        print("Course: " + "\t\t" + self.subject)
+        print("Tutor: " + "\t\t\t" + self.tutor)
+        print("Number of pupils: " , "\t" , self.number)
+        print("List of pupils: " , self._pupils)
+class CLIENT:
+    def __init__(self, id=0, name="Igor", surname="Alekseev", account=int(15000), subject="none"):
+        self.id=id
+        self.name=name
+        self.surname=surname
+        self._account=account
+        self.subject=subject
+
+    def info(self):
+       # print("ID number: " + "\t" + str(self.id))
+        print("Name: " + "\t\t" + self.name)
+        print("Surname: " + "\t" + self.surname)
+        print("Subject: " + "\t" + self.subject)
+    def _sp_info(self):
+        print("ID number: " + "\t" + str(self.id))
+        print("Name: " + "\t\t" + self.name)
+        print("Surname: " + "\t" + self.surname)
+        print("Subject: " + "\t" + self.subject)
+        print("Account: " + "\t" , self._account)
+
+def sale(pupil=CLIENT(), course=COURSE()):
+    pupil._account=pupil._account - course.price
+    pupil.subject=course.subject
+    course.number=course.number + 1
+    course._pupils.append(pupil.surname)
+    #pupil._sp_info()
+    #course._sp_info()
+
+course_base = list()
+client_base = list()
+
+#  "прогрузка" базы курсов
+for line in courses:
+    words = line.split()
+    course = COURSE()
+    course.subject = words[0]
+    course.price = int(words[1])
+    course.number = int(words[2])
+    course.tutor = str(words[3]) + " " + str(words[4])
+    course_base.append(course)
+
+i=0
+#  "прогрузка" базы клиентов
+for line in clients:
+    i = i + 1
+    words = line.split()
+    student = CLIENT()
+    student.id=i
+    student.name=words[0]
+    student.surname = words[1]
+    #student.info()
+    client_base.append(student)
+
+
+
+
+# i=0
+# for i in range(len(client_base)):
+#     client_base[i].info()
+#     print("\n")
+#i=0
+# for i in range(len(course_base)):
+#      course_base[i].info()
+#      print("\n")
+
+
+sale(client_base[0], course_base[1])
+sale(client_base[3], course_base[1])
+
