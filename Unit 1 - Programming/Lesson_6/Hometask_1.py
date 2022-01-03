@@ -67,3 +67,24 @@ for line in categories:
     print('\t' + 'Наиболее частое значение: ' + str(categories[line][2]))
     print('\t' + 'Максимальная частота встречаемости: ' + str(categories[line][3]) + '\n')
 
+#4. Показать на примере столбца alive, что сумма абсолютных частот равна количеству строк в таблице
+factor='alive'
+alives=data[factor].value_counts()
+alives_sum=sum(alives)
+if alives_sum == data.shape[0]:
+    print( 'Сумма абсолютных частот "' + str(factor) + '" (' + str(alives_sum) +') ' + 'равна количеству строк в таблице ('
+    + str(data.shape[0]) + ').' + '\n' )
+else:
+    print('Сумма абсолютных частот "' + str(factor) + '" (' + str(alives_sum) + ') ' + 'НЕ равна количеству строк в таблице ('
+          + str(data.shape[0]) + ').')
+    print('Разность составила ' + str(data.shape[0] - alives_sum) + ' единиц.'  + '\n')
+
+#5. Показать на примере столбца class, что сумма относительных частот равна 1
+factor='class'
+classes=data[factor].value_counts(normalize = True)
+classes_sum=sum(classes)
+if classes_sum == 1:
+    print( 'Сумма относительных частот "' + str(factor) + '" (' + str(classes_sum) +') ' + 'отнормирована на единицу.' + '\n' )
+else:
+    print( 'Сумма относительных частот "' + str(factor) + '" (' + str(classes_sum) +') ' + 'НЕ отнормирована на единицу.' + '\n' )
+    print('Разность составила ' + str(1 - classes_sum) + '.' + '\n')
