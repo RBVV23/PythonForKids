@@ -6,3 +6,14 @@
 #6. Факторизовать все категориальные признаки
 #7. Отсортировать данные по возрастанию классу кают (pclass)
 #8. Отсортировать данные по возрастанию класса кают (pclass) и при этом по убыванию возраста пассажиров (age)P
+
+import pandas as pd
+
+data = pd.read_csv('titanic.csv')
+
+pd.set_option('display.width', 150)
+
+pd.set_option('display.max_columns', 15)
+pd.set_option('display.max_rows', 20)
+# print(data)
+print(data.head())
