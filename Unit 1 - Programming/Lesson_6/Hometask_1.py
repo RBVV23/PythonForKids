@@ -88,3 +88,17 @@ if classes_sum == 1:
 else:
     print( 'Сумма относительных частот "' + str(factor) + '" (' + str(classes_sum) +') ' + 'НЕ отнормирована на единицу.' + '\n' )
     print('Разность составила ' + str(1 - classes_sum) + '.' + '\n')
+
+
+#6. Факторизовать все категориальные признаки
+data['deck'] = pd.factorize(data['deck'])[0]
+categories=data.describe(include=['object', 'bool'])
+for line in categories:
+    data[line] = pd.factorize(data[line])[0]
+print(data.head())
+
+#7. Отсортировать данные по возрастанию классу кают (pclass)
+print(data.sort_values(by='pclass'))
+
+#8. Отсортировать данные по возрастанию класса кают (pclass) и при этом по убыванию возраста пассажиров (age)
+print(data.sort_values(by=['pclass','age'], ascending=[True, False]))
