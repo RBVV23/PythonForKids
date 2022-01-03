@@ -9,18 +9,19 @@
 
 import pandas as pd
 
-data = pd.read_csv('titanic.csv')
 
 pd.set_option('display.width', 150)
-
 pd.set_option('display.max_columns', 15)
 pd.set_option('display.max_rows', 20)
+
+data = pd.read_csv('titanic.csv')
 # print(data)
 print(data.head())
 
 
 #1 Указать сколько есть признаков и информация о скольких пассажирах представлена в датасете
 print('Файл содержит информацию о '+ str(data.shape[0]) + ' пассажирах по ' + str(data.shape[1]) + ' признакам.')
+
 
 #2. Указать в каких столбцах пропущены данные и сколько
 columns=data.columns
@@ -43,8 +44,8 @@ print('Всего не хватает ' + str(del_sum) + ' значений из
 print('Отсутствующие значения по признакам: ')
 print(del_info)
 
-#3. Вывести статистику по числовым факторам, а также по категориальным
 
+#3. Вывести статистику по числовым факторам, а также по категориальным
 #print(data.describe())
 numbers=data.describe()
 print('ЧИСЛОВЫЕ ФАКТОРЫ')
@@ -54,7 +55,6 @@ for line in numbers:
     print('\t' + 'СКО: ' + str(numbers[line][2]))
     print('\t' + 'Минимальное значение: ' + str(numbers[line][3]))
     print('\t' + 'Максимальное значение: ' + str(numbers[line][7]))
-
 
 print('КАТЕГОРИАЛЬНЫЕ ФАКТОРЫ')
 print(data.describe(include=['object', 'bool']))
@@ -67,6 +67,7 @@ for line in categories:
     print('\t' + 'Наиболее частое значение: ' + str(categories[line][2]))
     print('\t' + 'Максимальная частота встречаемости: ' + str(categories[line][3]) + '\n')
 
+
 #4. Показать на примере столбца alive, что сумма абсолютных частот равна количеству строк в таблице
 factor='alive'
 alives=data[factor].value_counts()
@@ -78,6 +79,7 @@ else:
     print('Сумма абсолютных частот "' + str(factor) + '" (' + str(alives_sum) + ') ' + 'НЕ равна количеству строк в таблице ('
           + str(data.shape[0]) + ').')
     print('Разность составила ' + str(data.shape[0] - alives_sum) + ' единиц.'  + '\n')
+
 
 #5. Показать на примере столбца class, что сумма относительных частот равна 1
 factor='class'
@@ -97,8 +99,10 @@ for line in categories:
     data[line] = pd.factorize(data[line])[0]
 print(data.head())
 
+
 #7. Отсортировать данные по возрастанию классу кают (pclass)
 print(data.sort_values(by='pclass'))
+
 
 #8. Отсортировать данные по возрастанию класса кают (pclass) и при этом по убыванию возраста пассажиров (age)
 print(data.sort_values(by=['pclass','age'], ascending=[True, False]))
