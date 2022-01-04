@@ -12,13 +12,13 @@
 
 import pandas as pd
 import numpy as np
-#
-data=pd.read_csv('titanic.csv')
-#
+
+data = pd.read_csv('titanic.csv')
+
 pd.set_option('display.width', 1000)
 pd.set_option('display.max_columns', data.shape[1])
-#
-#print(data.head())
+
+# print(data.head())
 
 # 1. Вычислить средний возраст выживших женщин из кабин 1 класса (pclass = 1)
 dataset = data[(data['sex'] == 'female') & (data['pclass'] == 1) & (data['survived'] == 1)]
@@ -53,3 +53,68 @@ for line in columns:
         dataset=dataset.drop([line], axis=1)
 print(dataset.info())
 print()
+
+# 5. Создать датасет, состоящий из двух столбцов - возраст и транспортные расходы (age и fare).
+# При этом в датасете должны остаться только те пассажиры, которые являются женщинами и которые выжили.
+# После чего посчитать среднее по получившимся столбцам (за одну команду)
+new_columns = ['age', 'fare']
+dataset=data
+dataset=dataset[ (data['sex'] == 'female') & (data['survived'] == 1) ]
+for word in data.columns:
+    if word not in new_columns:
+        dataset=dataset.drop([word], axis=1)
+
+print(dataset.head())
+print(dataset.apply(np.mean, axis=0).head())
+print()
+
+# 6. Сделать факторизацию столбца пол (sex) с помощью функции map
+
+d_1 = {'male' : 1, 'female' : 0}
+dataset=data
+dataset['sex'] = dataset['sex'].map(d_1)
+print(dataset.head())
+
+
+# 7. Сделать факторизацию столбца пол (who) с помощью функции replace
+d_2 = {'child' : 2, 'man' : 1, 'woman' : 0}
+dataset = dataset.replace({'who' : d_2})
+print(dataset.head())
+
+# 8. Сделать факторизацию остальных категориальных столбцов
+dataset = data
+categories = data.describe(include = ['object', 'bool'])
+for line in categories:
+    dataset[line]=pd.factorize(dataset[line])[0]
+print(dataset.head())
+
+# 9. Посчитать средний возраст и средние транспортные расходы (age и fare) каждой категории пассажиров (дети, взрослые и женщины)
+data=pd.read_csv('titanic.csv')
+factors = ['age', 'fare']
+
+categories = []
+k = 0
+n = 0
+while k < len(data['who'].value_counts()):
+    if data['who'][n] not in categories:
+        categories.append(data['who'][n])
+        k += 1
+    n += 1
+
+for factor in factors:
+    #print(factor)
+    for category in categories:
+        #print('\t' + category)
+        dataset=data[data['who'] == category]
+        answer=dataset[factor].mean()
+        print('Средние значение параметра "' + str(factor) + '" для категории "' + str(category) + '" составляет: \t' + str(answer))
+
+
+# 10. Посчитать средний возраст и средние транспортные расходы (age и fare) каждой категории пассажиров,
+# учитывая класс каюты (pclass) (дети, взрослые и женщины)
+
+columns_to_show = ['fare', 'age']
+columns_to_group = ['who', 'pclass']
+
+print( data.groupby(columns_to_group)[columns_to_show].agg([np.mean]) )
+
