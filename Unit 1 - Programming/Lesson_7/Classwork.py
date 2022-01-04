@@ -17,6 +17,7 @@ print( data[ (data['sepal_width'] >=3) & (data['sepal_length'] < 5) ] )
 print(data['sepal_width'].max())
 print(data['sepal_width'].min())
 
+
 # Вывести средние значения у всех числовых факторов только у тех растений, у которых species = versicolor (то есть после факторизации 1)
 
 num_factors = data.describe()
