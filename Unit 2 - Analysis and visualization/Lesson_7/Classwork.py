@@ -38,7 +38,7 @@ print('\n' + 'Среднее значение "sepal_length" у растений
 print('\t' + str(data_set['sepal_length'].mean()) + '\n')
 
 
-#Какая средняя длина чашелистника (sepal_length) у растений вида virginica (после факторизации 2), у которых ширина чашелистника (sepal_width) меньше, чем 3.8.
+# Какая средняя длина чашелистника (sepal_length) у растений вида virginica (после факторизации 2), у которых ширина чашелистника (sepal_width) меньше, чем 3.8.
 
 data_set = data[ (data['species'] == 2) & (data['sepal_width'] < 3.8)]
 print('\n' + 'Среднее значение "sepal_length" у растений со "species" равным 2 и "sepal_width" меньшим 3.8:')
