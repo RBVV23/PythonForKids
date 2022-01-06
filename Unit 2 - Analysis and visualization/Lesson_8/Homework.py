@@ -19,3 +19,8 @@ print( data.pivot_table(['age'], ['sex', 'class'], aggfunc = 'mean'))
 # 2. Посмотреть, влияет ли класс пассажира (pclass) на его смертность
 print( pd.crosstab(data['class'], data['alive'], normalize=True, margins=True ))
 
+# 3. Посмотреть, влияет ли пол пассажира (sex) на его смертность
+print( pd.crosstab(data['sex'], data['alive'], normalize=True, margins=True ))
+
+# 4. Посмотреть на зависимость среднего возраста и средних транспортных расходов и смерти
+print( data.pivot_table(['age', 'fare'], ['alive'], aggfunc = 'mean'))
