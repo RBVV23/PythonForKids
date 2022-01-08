@@ -1,5 +1,4 @@
 import pandas as pd
-# import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -27,7 +26,7 @@ df = pd.read_csv('clients.csv')
 print(df.shape)
 print(df.info())
 
-## print(df['state'].value_counts())
+# print(df['state'].value_counts())
 print(df['churn'].value_counts())
 df['churn'].value_counts().plot(kind='bar')
 plt.show()
@@ -44,3 +43,4 @@ corr_matrix = df.drop(['state', 'international plan', 'voice mail plan', 'area c
 # print(corr_matrix)
 sns.heatmap(corr_matrix)
 plt.show()
+
