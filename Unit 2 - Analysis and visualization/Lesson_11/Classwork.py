@@ -13,6 +13,7 @@ df = pd.read_csv('clients.csv')
 df = df.drop(['total day charge', 'total night charge', 'total eve charge', 'total intl charge'], axis=1)
 corr_matrix = df.drop(['state', 'international plan', 'voice mail plan', 'area code'], axis=1).corr()
 # print(corr_matrix)
+
 sns.heatmap(corr_matrix)
 plt.show()
 
@@ -24,7 +25,6 @@ hist_columns = ['total night minutes', 'customer service calls',
 for column_name in hist_columns:
     df[column_name].plot(kind='hist', title=column_name)
     plt.show()
-
 
 for column_name in hist_columns:
     sns.distplot(df[column_name], label=column_name)
