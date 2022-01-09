@@ -43,6 +43,18 @@ print(df['customer service calls'].value_counts())
 
 sns.countplot(x='customer service calls', hue='churn', data=df)
 plt.show()
+
 sns.boxplot(y='churn', x='total day minutes', data=df, orient='h')
+plt.show()
+
+
+print(df['state'].value_counts())
+print(df['phone number'].value_counts())
+print(df['international plan'].value_counts())
+print(df['voice mail plan'].value_counts())
+
+sns.countplot(x='international plan', hue='churn', data=df, orient='h')
+plt.show()
+sns.countplot(x='voice mail plan', hue='churn', data=df, orient='h')
 plt.show()
 
