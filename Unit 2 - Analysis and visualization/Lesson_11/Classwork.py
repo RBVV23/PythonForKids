@@ -12,7 +12,7 @@ df = pd.read_csv('clients.csv')
 
 df = df.drop(['total day charge', 'total night charge', 'total eve charge', 'total intl charge'], axis=1)
 corr_matrix = df.drop(['state', 'international plan', 'voice mail plan', 'area code'], axis=1).corr()
-## print(corr_matrix)
+# print(corr_matrix)
 sns.heatmap(corr_matrix)
 plt.show()
 
@@ -58,3 +58,5 @@ plt.show()
 sns.countplot(x='voice mail plan', hue='churn', data=df, orient='h')
 plt.show()
 
+print(df.groupby(['state'])['churn'].agg(np.mean))
+print(df.groupby(['state'])['churn'].agg(np.mean).sort_values(ascending=False))
