@@ -47,7 +47,6 @@ plt.show()
 sns.boxplot(y='churn', x='total day minutes', data=df, orient='h')
 plt.show()
 
-
 print(df['state'].value_counts())
 print(df['phone number'].value_counts())
 print(df['international plan'].value_counts())
