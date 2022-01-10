@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
-# import numpy as np
 
 pd.set_option('display.width', 1000)
 pd.set_option('display.max_columns', 20)
