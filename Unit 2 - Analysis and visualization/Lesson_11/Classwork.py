@@ -62,3 +62,5 @@ print(df.groupby(['state'])['churn'].agg(np.mean).sort_values(ascending=False))
 
 #1
 #2
+#3
+#4
