@@ -59,3 +59,5 @@ plt.show()
 
 print(df.groupby(['state'])['churn'].agg(np.mean))
 print(df.groupby(['state'])['churn'].agg(np.mean).sort_values(ascending=False))
+
+#1
