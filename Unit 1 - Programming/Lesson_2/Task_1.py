@@ -17,11 +17,11 @@
 from random import randint
 
 numbers = []
-winners=0
+winners = 0
 for i in range(10):
-    ham=randint(0,101)
-    if (ham % 2)==0:
-        winners+=1
+    ham = randint(0, 101)
+    if (ham % 2) == 0:
+        winners += 1
     numbers.append(ham)
 print('Из шляпы вытянули номера: ', numbers)
 print('Количество победитлей: ', winners)
