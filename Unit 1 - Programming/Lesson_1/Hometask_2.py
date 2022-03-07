@@ -7,16 +7,16 @@
 # а после кодирует его алгоритмом Штирлица и выводит получившуюся последовательность из 0 и 1.
 
 print('Введите открытый текст (двухзначное число): ')
-OT=int(input())
-nules=OT % 10
-ones=OT // 10
+OT = int(input())
+zeros = OT % 10
+ones = OT // 10
 
-ST=''
+ST = ''
 
 for i in range(ones):
-    ST=ST + '1'
+    ST = ST + '1'
 
 
-for i in range(nules):
-    ST=ST + '0'
+for i in range(zeros):
+    ST = ST + '0'
 print('Щифрованный текст: ', ST)
