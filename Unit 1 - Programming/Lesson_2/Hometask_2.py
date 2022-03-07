@@ -8,10 +8,10 @@
 #  правилам бананового монстра.
 
 
-import math
 from random import randint
 
-massive=[
+
+massive = [
     'кочерга',
     'молоко',
     'конь',
@@ -23,44 +23,43 @@ massive=[
 
 print('Привет, я Банановый Монстр и хочу сграть с тобй в одну игру!')
 
-health=7
-N=randint(0,6)
-word=massive[N]
-L=len(word)
+health = 7
+N = randint(0, 6)
+word = massive[N]
+L = len(word)
 
-print('Я загадал слово из ',L,' букв.')
+print('Я загадал слово из ', L, ' букв.')
 print(word)
 print('Отгадай его!')
 print()
-answer='*'*L
-flag=0
+answer = '*'*L
+flag = 0
 
-while health != 0 and flag!=1:
+while health != 0 and flag != 1:
     print('Мое слово: ', answer)
     print('Количество попыток: ', health)
     print('Твоя буква: ')
-    letter=str(input())
+    letter = str(input())
     while len(letter) != 1:
         print('Нужно ввести один символ!')
         print('Попробуй еще разок: ')
         letter = str(input())
 
-
     if letter in word:
-        index=word.find(letter)
+        index = word.find(letter)
         while index != -1:
-            answer=answer[:index] + letter + answer[index+1:]
-            index=word.find(letter,index+1)
-        if word==answer:
-            flag=1
+            answer = answer[:index] + letter + answer[index+1:]
+            index = word.find(letter, index+1)
+        if word == answer:
+            flag = 1
     else:
         print('Такой буквы нет в моем слове!')
-        health=health-1
+        health = health-1
 
-if flag==1:
+if flag == 1:
     print('Правильно, мое слово - ', word)
     print('Поздравляю, ты победил!')
-    print('Количество оставшихся попыток: ',health)
+    print('Количество оставшихся попыток: ', health)
 else:
     print('К сожалению, у тебя не осталось больше попыток - ты проиграл')
     print('Мое слово было: ',  word)
