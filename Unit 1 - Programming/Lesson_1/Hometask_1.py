@@ -6,11 +6,11 @@
 
 
 print('Введите номер поезда: ')
-number=int(input())
+number = int(input())
 print('Номер поезда: ', number)
-result=0;
-while number>0:
-    number=number//10
-    result=result+1
+result = 0
+while number > 0:
+    number = number//10
+    result = result + 1
 
 print('В поезде: ', result, ' вагона(-ов)')
