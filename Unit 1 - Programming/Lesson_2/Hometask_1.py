@@ -9,10 +9,12 @@
 import math
 from random import randint
 
+
 def buy(money):
-    price=math.sqrt( randint(10,100) )
-    N=money // price
+    price = math.sqrt(randint(10, 100))
+    N = money // price
     print('На ', money, ' у.е вы можете купить ', N, ' яблок(-а) по ', price, 'у.е за штуку.')
+
 
 print('Введите свои финансовые возможности:')
 money = int(input())
