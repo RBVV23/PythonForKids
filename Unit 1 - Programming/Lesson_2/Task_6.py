@@ -33,23 +33,31 @@ help_list = [
 
 def google():
     print('Введи, пожалуйста свой поисковый запрос:')
-    string=input(str())
-    words=string.split(' ')
-    result='https://www.google.ru/search?q='
+    string = input(str())
+    words = string.split(' ')
+    result = 'https://www.google.ru/search?q='
     for i in range(len(words)):
-        result=result + words[i] + '%20'
+        result = result + words[i] + '%20'
     print('Ваш поисковый запрос: ' + result)
-def add(input, number):
-    result=number+input
-    print('add ', input, ' = ', result)
+
+
+def add(inpt, number):
+    result = number + inpt
+    print('add ', inpt, ' = ', result)
     return result
-def sub(input, number):
-    result=number-input
-    print('sub',input,' = ', result)
+
+
+def sub(entering, number):
+    result = number - entering
+    print('sub', entering, ' = ', result)
     return result
-def res(input):
-    result=input
-    print('Промежуочный результат: ',result)
+
+
+def res(inpt):
+    result = inpt
+    print('Промежуочный результат: ', result)
+
+
 def help():
     print('Бот умеет выполнять следующие команды:')
     for i in range(len(command_list)):
@@ -64,22 +72,22 @@ def help():
 # google('как стать программистом')
 
 print('Привет! Я бот, который умеет выполнять различные команды!')
-flag=1
-number=0
-while flag !=0:
+flag = 1
+number = 0
+while flag != 0:
     print('Введи, пожалуйста команду:')
-    command=input(str())
-    if command =='help':
+    command = input(str())
+    if command == 'help':
         help()
-    elif command =='google':
+    elif command == 'google':
         google()
-    elif command[0:3] =='add':
-        if len(command)>4:
-            ham=command[4:len(command)]
-            arg=int(ham)
+    elif command[0:3] == 'add':
+        if len(command) > 4:
+            ham = command[4:len(command)]
+            arg = int(ham)
         else:
             print('Вы не ввели аргумент для функции ', command[0:3], ', введите число:')
-            arg=int(input())
+            arg = int(input())
         number = add(arg, number)
     elif command[0:3] == 'sub':
         if len(command) > 4:
@@ -89,11 +97,10 @@ while flag !=0:
             print('Вы не ввели аргумент для функции ', command[0:3], ', введите число:')
             arg = int(input())
         number = sub(arg, number)
-    elif command=='res':
+    elif command == 'res':
         res(number)
-    elif command=='q':
-        flag=0
+    elif command == 'q':
+        flag = 0
     else:
         print('Прости, но я не знаю такой команды "' + command + '"')
 print('Заверешние работы бота')
-
