@@ -9,29 +9,27 @@
 
 
 print('Введите строку для разделения: ')
-#string='mum-dud sa'
-string=input()
-print('Введенная строка: ',string)
+string = input()
+print('Введенная строка: ', string)
 
 print('Введите разделители сплошным текстом: ')
-#separators_user=[' ',',','-']
-separators_user=input()
+separators_user = input()
 
-separators=[]
+separators = []
 for i in range(len(separators_user)):
     separators.append(separators_user[i])
 
 print('Введенные разделители: ',separators)
 
 def split(string, separators):
-    word=""
-    result=[]
+    word = ""
+    result = []
     for symbol in string:
         if symbol in separators and word != "":
             result.append(word)
-            word=""
+            word = ""
         else:
-            word+=symbol
+            word += symbol
     if word != "":
         result.append(word)
     return result
