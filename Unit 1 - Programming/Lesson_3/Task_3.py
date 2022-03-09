@@ -16,8 +16,6 @@ book['England'] = ['London']
 book['France'] = ['Paris']
 book['Germany'] = ['Munich', 'Frankfurt', 'Dresden']
 
-# print('keys: ',book.keys())
-# print('values: ', book.values())
 
 def open(book):
     for word in book.keys():
