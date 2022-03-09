@@ -12,24 +12,24 @@
 # посещенных городов больше всего.
 
 book = {}
-book['England']=['London']
-book['France']=['Paris']
-book['Germany']=['Munich', 'Frankfurt', 'Dresden']
+book['England'] = ['London']
+book['France'] = ['Paris']
+book['Germany'] = ['Munich', 'Frankfurt', 'Dresden']
 
 # print('keys: ',book.keys())
 # print('values: ', book.values())
 
 def open(book):
-    for str in book.keys():
-        print('Страна: ',str)
-        print('Города: ', book.get(str))
+    for word in book.keys():
+        print('Страна: ', word)
+        print('Города: ', book.get(word))
         print()
 
 is_continue = 1
 
 while is_continue != 0:
     print('Введите страну и город через пробел (или команду): ')
-    command=input(str())
+    command = input(str())
     command_list=command.split()
     country=command_list[0]
     city=command_list[len(command_list) - 1]
