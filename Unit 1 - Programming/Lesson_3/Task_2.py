@@ -12,10 +12,10 @@ team_list=[]
 
 def add(name, team_list):
     try:
-        index=team_list.index(name)
+        index = team_list.index(name)
         print(name, ' уже есть в списке под номером ', index)
     except ValueError:
-        index=-1
+        index = -1
         team_list.append(name)
         print(name, ' успешно добавлен(-а) в список')
     return team_list
