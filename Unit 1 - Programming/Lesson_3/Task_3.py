@@ -25,9 +25,9 @@ def open(book):
         print('Города: ', book.get(word))
         print()
 
-is_continue = 1
+is_continue = True
 
-while is_continue != 0:
+while is_continue:
     print('Введите страну и город через пробел (или команду): ')
     command = input(str())
     command_list = command.split()
@@ -52,7 +52,7 @@ while is_continue != 0:
     else:
         city_list = book.get(country)
         city_list.append(city)
-        book[country]=city_list
+        book[country] = city_list
 
 print('Итоговый список стран и городов:')
 open(book)
