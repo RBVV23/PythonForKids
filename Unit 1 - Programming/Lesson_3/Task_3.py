@@ -30,27 +30,27 @@ is_continue = 1
 while is_continue != 0:
     print('Введите страну и город через пробел (или команду): ')
     command = input(str())
-    command_list=command.split()
-    country=command_list[0]
-    city=command_list[len(command_list) - 1]
+    command_list = command.split()
+    country = command_list[0]
+    city = command_list[len(command_list) - 1]
 
     if command == 'favorite':
-        max_visits=1
+        max_visits = 1
         for word in book.keys():
             if len(book.get(word)) > max_visits:
-                max_visits=len(book.get(word))
-                max_country=word
+                max_visits = len(book.get(word))
+                max_country = word
         print('Наиболее часто посещаемая страна: ', max_country)
         print('Количество посещенных в ней городов:', max_visits)
         print()
     elif command == 'open':
         open(book)
     elif command == 'exit':
-        is_continue=0
+        is_continue = 0
     elif book.get(country) == None:
-        book[country]=[city]
+        book[country] = [city]
     else:
-        city_list=book.get(country)
+        city_list = book.get(country)
         city_list.append(city)
         book[country]=city_list
 
