@@ -8,14 +8,14 @@
 #
 # Задание: Написать программу, которая будет помогать Мише составлять списки для участников квеста
 
-team_list=[]
+team_list = []
+
 
 def add(name, team_list):
     try:
         index = team_list.index(name)
         print(name, ' уже есть в списке под номером ', index)
     except ValueError:
-        index = -1
         team_list.append(name)
         print(name, ' успешно добавлен(-а) в список')
     return team_list
@@ -29,26 +29,27 @@ def remove(name, team_list):
         print(name, ' и так не был(-а) в списках')
     return team_list
 
+
 print('Привет, я бот, который поможет тебе составить список гостей на мероприятие!')
 
-exit=0
+exit = 0
 while exit != 1:
     print('Введи команду и имя: ')
-    command=input(str())
-    my_command=command.split(' ')
-    func=my_command[0]
+    command = input(str())
+    my_command = command.split(' ')
+    func = my_command[0]
 
     if func == 'add':
         arg = my_command[1]
-        team_list=add(arg, team_list)
+        team_list = add(arg, team_list)
     elif func == 'remove':
         arg = my_command[1]
-        team_list=remove(arg, team_list)
+        team_list = remove(arg, team_list)
     elif func == 'team':
         print('Текущий список гостей: ')
         print(team_list)
     elif func == 'exit':
-        exit=1
+        exit = 1
     else:
         print('Прости, но я не знаю такой команды')
 
