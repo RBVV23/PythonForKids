@@ -2,8 +2,6 @@ import codecs
 clients = codecs.open('clients.txt', 'r', 'utf-8')
 courses = codecs.open('catalog.txt', 'r', 'utf-8')
 
-import math
-from random import randint
 
 class COURSE:
     def __init__(self, subject="Сareer guidance", price=int(4500), tutor="Igor A.", pupils=list()):
