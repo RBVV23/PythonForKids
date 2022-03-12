@@ -10,6 +10,7 @@ print('Исходный список')
 print('my_list = ')
 print(my_list)
 print()
+
 print('Фильтрованный список')
 print('new_list = ')
 print(new_list)
