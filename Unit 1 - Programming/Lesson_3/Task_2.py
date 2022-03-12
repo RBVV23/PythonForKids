@@ -56,4 +56,3 @@ while exit != 1:
 
 print('Окончательный список:')
 print(team_list)
-
