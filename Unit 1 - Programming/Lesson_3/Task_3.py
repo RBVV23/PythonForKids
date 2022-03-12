@@ -23,6 +23,7 @@ def open(book):
         print('Города: ', book.get(word))
         print()
 
+
 is_continue = True
 
 while is_continue:
