@@ -8,20 +8,20 @@
 
 class Auto:
     def __init__(self, color="red", model="BMW", speed=200):
-        self.color=color
-        self.model=model
-        self.speed=speed
+        self.color = color
+        self.model = model
+        self.speed = speed
 
     def change_color(self, new_color):
-        self.color=new_color
+        self.color = new_color
         print("Color is successfully changed")
 
     def change_speed(self, new_speed):
-        self.speed=new_speed
+        self.speed = new_speed
         print("Maximum speed is successfully changed")
 
     def change_model(self, new_model):
-        self.model=new_model
+        self.model = new_model
         print("Model is successfully changed")
 
     def tell(self):
@@ -30,13 +30,13 @@ class Auto:
         print("Model is " + self.model)
         print("Maximum speed is " + str(self.speed))
 
-my_auto_1=Auto()
-my_auto_2=Auto()
+my_auto_1 = Auto()
+my_auto_2 = Auto()
 my_auto_1.tell()
 
-new_color="yellow"
-new_model="Jeep"
-new_speed=180
+new_color = "yellow"
+new_model = "Jeep"
+new_speed = 180
 
 my_auto_2.change_color(new_color)
 my_auto_2.change_model(new_model)
