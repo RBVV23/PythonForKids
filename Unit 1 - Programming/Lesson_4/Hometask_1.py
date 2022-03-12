@@ -14,14 +14,16 @@ class COURSE:
     def info(self):
         print("Course: " + "\t\t" + self.subject)
         print("Tutor: " + "\t\t\t" + self.tutor)
-        print("Number of pupils: " + "\t" , self.number)
-        print("Price: " , self.price)
+        print("Number of pupils: " + "\t", self.number)
+        print("Price: ", self.price)
 
     def _sp_info(self):
         print("Course: " + "\t\t" + self.subject)
         print("Tutor: " + "\t\t\t" + self.tutor)
-        print("Number of pupils: " , "\t" , self.number)
-        print("List of pupils: " , self._pupils)
+        print("Number of pupils: ", "\t", self.number)
+        print("List of pupils: ", self._pupils)
+
+
 class CLIENT:
     def __init__(self, id=0, name="Igor", surname="Alekseev", account=int(15000), subject="none"):
         self.id=id
@@ -31,24 +33,26 @@ class CLIENT:
         self.subject=subject
 
     def info(self):
-       # print("ID number: " + "\t" + str(self.id))
+        # print("ID number: " + "\t" + str(self.id))
         print("Name: " + "\t\t" + self.name)
         print("Surname: " + "\t" + self.surname)
         print("Subject: " + "\t" + self.subject)
+
     def _sp_info(self):
         print("ID number: " + "\t" + str(self.id))
         print("Name: " + "\t\t" + self.name)
         print("Surname: " + "\t" + self.surname)
         print("Subject: " + "\t" + self.subject)
-        print("Account: " + "\t" , self._account)
+        print("Account: " + "\t", self._account)
+
 
 def sale(pupil=CLIENT(), course=COURSE()):
     pupil._account=pupil._account - course.price
     pupil.subject=course.subject
     course.number=course.number + 1
     course._pupils.append(pupil.surname)
-    #pupil._sp_info()
-    #course._sp_info()
+    # pupil._sp_info()
+    # course._sp_info()
 
 course_base = list()
 client_base = list()
@@ -72,20 +76,8 @@ for line in clients:
     student.id=i
     student.name=words[0]
     student.surname = words[1]
-    #student.info()
+    # student.info()
     client_base.append(student)
-
-
-
-
-# i=0
-# for i in range(len(client_base)):
-#     client_base[i].info()
-#     print("\n")
-#i=0
-# for i in range(len(course_base)):
-#      course_base[i].info()
-#      print("\n")
 
 
 sale(client_base[0], course_base[1])
