@@ -26,9 +26,10 @@ class Auto:
 
     def tell(self):
         print("Car is ", self)
-        print("Color is " , self.color)
+        print("Color is ", self.color)
         print("Model is " + self.model)
         print("Maximum speed is " + str(self.speed))
+
 
 my_auto_1 = Auto()
 my_auto_2 = Auto()
