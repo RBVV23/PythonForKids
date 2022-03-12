@@ -9,23 +9,23 @@ import codecs
 file = codecs.open('read.txt', 'r', 'utf-8')
 
 words = []
-mega_str=[]
-long_str=[]
+mega_str = []
+long_str = []
 
 
 for line in file:
     print(line)
-    words=line.split()
+    words = line.split()
     words.reverse()
-    str_inv=''
+    str_inv = ''
     for i in range(0, len(words)):
-        str_inv=str_inv + words[i] + ' '
+        str_inv = str_inv + words[i] + ' '
     mega_str.append(str_inv)
 
 file.close
 mega_str.reverse()
 
-file_out=open('write.txt', 'w')
+file_out = open('write.txt', 'w')
 
 for word in mega_str:
     print(word)
