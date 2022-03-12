@@ -4,7 +4,7 @@ courses = codecs.open('catalog.txt', 'r', 'utf-8')
 
 
 class COURSE:
-    def __init__(self, subject="Сareer guidance", price=int(4500), tutor="Igor A.", pupils=list()):
+    def __init__(self, subject="Сareer guidance", price=int(4500), tutor="Igor A.", pupils=[]):
         self.subject=subject
         self.price = price
         self.tutor = tutor
@@ -26,11 +26,11 @@ class COURSE:
 
 class CLIENT:
     def __init__(self, id=0, name="Igor", surname="Alekseev", account=int(15000), subject="none"):
-        self.id=id
-        self.name=name
-        self.surname=surname
-        self._account=account
-        self.subject=subject
+        self.id = id
+        self.name = name
+        self.surname = surname
+        self._account = account
+        self.subject = subject
 
     def info(self):
         # print("ID number: " + "\t" + str(self.id))
@@ -47,12 +47,13 @@ class CLIENT:
 
 
 def sale(pupil=CLIENT(), course=COURSE()):
-    pupil._account=pupil._account - course.price
-    pupil.subject=course.subject
-    course.number=course.number + 1
+    pupil._account = pupil._account - course.price
+    pupil.subject = course.subject
+    course.number = course.number + 1
     course._pupils.append(pupil.surname)
     # pupil._sp_info()
     # course._sp_info()
+
 
 course_base = list()
 client_base = list()
@@ -67,14 +68,14 @@ for line in courses:
     course.tutor = str(words[3]) + " " + str(words[4])
     course_base.append(course)
 
-i=0
+i = 0
 #  "прогрузка" базы клиентов
 for line in clients:
     i = i + 1
     words = line.split()
     student = CLIENT()
-    student.id=i
-    student.name=words[0]
+    student.id = i
+    student.name = words[0]
     student.surname = words[1]
     # student.info()
     client_base.append(student)
@@ -82,4 +83,3 @@ for line in clients:
 
 sale(client_base[0], course_base[1])
 sale(client_base[3], course_base[1])
-
