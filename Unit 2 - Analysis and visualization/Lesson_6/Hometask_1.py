@@ -40,7 +40,8 @@ for word in columns:
     print('Пропущенных значений: ' + str(num_del) + ' из ' + str(data.shape[0]) + '.')
     print()
 
-print('Всего не хватает ' + str(del_sum) + ' значений из ' + str(data.shape[0]*data.shape[1]) + ' (' + str(round(100*del_sum/(data.shape[0]*data.shape[1]), 1)) + ' %)')
+print('Всего не хватает ' + str(del_sum) + ' значений из ' + str(data.shape[0]*data.shape[1]) +
+      ' (' + str(round(100*del_sum/(data.shape[0]*data.shape[1]), 1)) + ' %)')
 print('Отсутствующие значения по признакам: ')
 print(del_info)
 
@@ -73,28 +74,30 @@ factor = 'alive'
 alives = data[factor].value_counts()
 alives_sum = sum(alives)
 if alives_sum == data.shape[0]:
-    print( 'Сумма абсолютных частот "' + str(factor) + '" (' + str(alives_sum) +') ' + 'равна количеству строк в таблице ('
-    + str(data.shape[0]) + ').' + '\n' )
+    print('Сумма абсолютных частот "' + str(factor) + '" (' + str(alives_sum) + ') ' +
+          'равна количеству строк в таблице (' + str(data.shape[0]) + ').' + '\n')
 else:
-    print('Сумма абсолютных частот "' + str(factor) + '" (' + str(alives_sum) + ') ' + 'НЕ равна количеству строк в таблице ('
-          + str(data.shape[0]) + ').')
-    print('Разность составила ' + str(data.shape[0] - alives_sum) + ' единиц.'  + '\n')
+    print('Сумма абсолютных частот "' + str(factor) + '" (' + str(alives_sum) + ') ' +
+          'НЕ равна количеству строк в таблице (' + str(data.shape[0]) + ').')
+    print('Разность составила ' + str(data.shape[0] - alives_sum) + ' единиц.' + '\n')
 
 
 # 5. Показать на примере столбца class, что сумма относительных частот равна 1
-factor='class'
-classes=data[factor].value_counts(normalize = True)
-classes_sum=sum(classes)
+factor = 'class'
+classes = data[factor].value_counts(normalize=True)
+classes_sum = sum(classes)
 if classes_sum == 1:
-    print( 'Сумма относительных частот "' + str(factor) + '" (' + str(classes_sum) +') ' + 'отнормирована на единицу.' + '\n' )
+    print('Сумма относительных частот "' + str(factor) + '" (' + str(classes_sum) + ') ' +
+          'отнормирована на единицу.' + '\n')
 else:
-    print( 'Сумма относительных частот "' + str(factor) + '" (' + str(classes_sum) +') ' + 'НЕ отнормирована на единицу.' + '\n' )
+    print('Сумма относительных частот "' + str(factor) + '" (' + str(classes_sum) + ') ' +
+           'НЕ отнормирована на единицу.' + '\n')
     print('Разность составила ' + str(1 - classes_sum) + '.' + '\n')
 
 
 # 6. Факторизовать все категориальные признаки
 data['deck'] = pd.factorize(data['deck'])[0]
-categories=data.describe(include=['object', 'bool'])
+categories = data.describe(include=['object', 'bool'])
 for line in categories:
     data[line] = pd.factorize(data[line])[0]
 print(data.head())
@@ -105,4 +108,4 @@ print(data.sort_values(by='pclass'))
 
 
 # 8. Отсортировать данные по возрастанию класса кают (pclass) и при этом по убыванию возраста пассажиров (age)
-print(data.sort_values(by=['pclass','age'], ascending=[True, False]))
+print(data.sort_values(by=['pclass', 'age'], ascending=[True, False]))
