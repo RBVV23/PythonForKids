@@ -20,24 +20,24 @@ print(data.head())
 
 
 # 1 Указать сколько есть признаков и информация о скольких пассажирах представлена в датасете
-print('Файл содержит информацию о '+ str(data.shape[0]) + ' пассажирах по ' + str(data.shape[1]) + ' признакам.')
+print('Файл содержит информацию о ' + str(data.shape[0]) + ' пассажирах по ' + str(data.shape[1]) + ' признакам.')
 
 
 # 2. Указать в каких столбцах пропущены данные и сколько
-columns=data.columns
+columns = data.columns
 
-del_sum=0
-del_info={}
+del_sum = 0
+del_info = {}
 for word in columns:
     inf = data[word].value_counts()
-    print('Признак "' + word + '" принимает '  + str(len(inf)) +  ' значения(-й): ')
-    print(data[word].value_counts() )
-    num_del=data.shape[0] - sum(inf)
+    print('Признак "' + word + '" принимает ' + str(len(inf)) + ' значения(-й): ')
+    print(data[word].value_counts())
+    num_del = data.shape[0] - sum(inf)
     if num_del != 0:
-        del_info[word]=num_del
-    del_sum+=num_del
-    print( 'Содержит информацию о ' + str(sum(inf)) + ' пассажирах' + ' из ' + str(data.shape[0]) + '.' )
-    print( 'Пропущенных значений: ' + str(num_del) + ' из ' + str(data.shape[0]) + '.' )
+        del_info[word] = num_del
+    del_sum += num_del
+    print('Содержит информацию о ' + str(sum(inf)) + ' пассажирах' + ' из ' + str(data.shape[0]) + '.')
+    print('Пропущенных значений: ' + str(num_del) + ' из ' + str(data.shape[0]) + '.')
     print()
 
 print('Всего не хватает ' + str(del_sum) + ' значений из ' + str(data.shape[0]*data.shape[1]) + ' (' + str(round(100*del_sum/(data.shape[0]*data.shape[1]), 1)) + ' %)')
@@ -47,10 +47,10 @@ print(del_info)
 
 # 3. Вывести статистику по числовым факторам, а также по категориальным
 
-numbers=data.describe()
+numbers = data.describe()
 print('ЧИСЛОВЫЕ ФАКТОРЫ')
 for line in numbers:
-    print('Статистика по признаку "'+ str(line)+'":')
+    print('Статистика по признаку "' + str(line)+'":')
     print('\t' + 'Среднее значение: ' + str(numbers[line][1]))
     print('\t' + 'СКО: ' + str(numbers[line][2]))
     print('\t' + 'Минимальное значение: ' + str(numbers[line][3]))
@@ -58,20 +58,20 @@ for line in numbers:
 
 print('КАТЕГОРИАЛЬНЫЕ ФАКТОРЫ')
 print(data.describe(include=['object', 'bool']))
-categories=data.describe(include=['object', 'bool'])
+categories = data.describe(include=['object', 'bool'])
 
 for line in categories:
     print(line)
-    print('Статистика по признаку "'+ str(line) + '":')
+    print('Статистика по признаку "' + str(line) + '":')
     print('\t' + 'Уникальных значений: ' + str(categories[line][1]))
     print('\t' + 'Наиболее частое значение: ' + str(categories[line][2]))
     print('\t' + 'Максимальная частота встречаемости: ' + str(categories[line][3]) + '\n')
 
 
 # 4. Показать на примере столбца alive, что сумма абсолютных частот равна количеству строк в таблице
-factor='alive'
-alives=data[factor].value_counts()
-alives_sum=sum(alives)
+factor = 'alive'
+alives = data[factor].value_counts()
+alives_sum = sum(alives)
 if alives_sum == data.shape[0]:
     print( 'Сумма абсолютных частот "' + str(factor) + '" (' + str(alives_sum) +') ' + 'равна количеству строк в таблице ('
     + str(data.shape[0]) + ').' + '\n' )
