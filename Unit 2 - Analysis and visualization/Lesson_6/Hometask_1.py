@@ -109,3 +109,4 @@ print(data.sort_values(by='pclass'))
 
 # 8. Отсортировать данные по возрастанию класса кают (pclass) и при этом по убыванию возраста пассажиров (age)
 print(data.sort_values(by=['pclass', 'age'], ascending=[True, False]))
+
