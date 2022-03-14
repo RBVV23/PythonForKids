@@ -42,7 +42,7 @@ print('\t' + str(data_set['sepal_length'].mean()) + '\n')
 # Какая средняя длина чашелистника (sepal_length) у растений вида virginica (после факторизации 2),
 # у которых ширина чашелистника (sepal_width) меньше, чем 3.8.
 
-data_set = data[ (data['species'] == 2) & (data['sepal_width'] < 3.8)]
+data_set = data[(data['species'] == 2) & (data['sepal_width'] < 3.8)]
 print('\n' + 'Среднее значение "sepal_length" у растений со "species" равным 2 и "sepal_width" меньшим 3.8:')
 print('\t' + str(data_set['sepal_length'].mean()) + '\n')
 
@@ -51,13 +51,11 @@ print('\t' + str(data_set['sepal_length'].mean()) + '\n')
 # у растений вида setosa (после факторизации 0), у которых длина чашелистника (sepal_width)
 # находится в пределах между 3 и 4 (то есть больше или равна 3 и при этом меньше или равна 4)
 
-data_set = data[ (data['species'] == 0) & (data['sepal_width'] < 4) & (data['sepal_width'] > 3)]
+data_set = data[(data['species'] == 0) & (data['sepal_width'] < 4) & (data['sepal_width'] > 3)]
 print('\n' + 'Максимальное значение "sepal_length" у растений со "species" равным 0 и "sepal_width" между 3 и 4:')
 print('\t' + str(data_set['sepal_length'].max()) + '\n')
 print('\n' + 'Минимальное значение "sepal_length" у растений со "species" равным 0 и "sepal_width" между 3 и 4:')
 print('\t' + str(data_set['sepal_length'].min()) + '\n')
-
-
 
 print(data.apply(np.max))
 print(data.apply(np.min))
