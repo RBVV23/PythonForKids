@@ -105,7 +105,7 @@ print(dataset.head())
 # 9. Посчитать средний возраст и средние транспортные расходы (age и fare)
 # каждой категории пассажиров (дети, взрослые и женщины)
 
-data=pd.read_csv('titanic.csv')
+data = pd.read_csv('titanic.csv')
 factors = ['age', 'fare']
 
 categories = []
@@ -118,11 +118,9 @@ while k < len(data['who'].value_counts()):
     n += 1
 
 for factor in factors:
-    #print(factor)
     for category in categories:
-        #print('\t' + category)
-        dataset=data[data['who'] == category]
-        answer=dataset[factor].mean()
+        dataset = data[data['who'] == category]
+        answer = dataset[factor].mean()
         print('Средние значение параметра "' + str(factor) + '" для категории "' + str(category) + '" составляет: \t' + str(answer))
 
 
@@ -132,5 +130,4 @@ for factor in factors:
 columns_to_show = ['fare', 'age']
 columns_to_group = ['who', 'pclass']
 
-print( data.groupby(columns_to_group)[columns_to_show].agg([np.mean]) )
-
+print(data.groupby(columns_to_group)[columns_to_show].agg([np.mean]))
