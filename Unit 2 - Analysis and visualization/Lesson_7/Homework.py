@@ -121,7 +121,8 @@ for factor in factors:
     for category in categories:
         dataset = data[data['who'] == category]
         answer = dataset[factor].mean()
-        print('Средние значение параметра "' + str(factor) + '" для категории "' + str(category) + '" составляет: \t' + str(answer))
+        print('Средние значение параметра "' + str(factor) + '" для категории "' + str(category)
+              + '" составляет: \t' + str(answer))
 
 
 # 10. Посчитать средний возраст и средние транспортные расходы (age и fare) каждой категории пассажиров,
