@@ -51,7 +51,7 @@ print('\n Разность между средними расходами пог
 
 # 4. Удалить столбцы типа object, в которых пропущены данные
 
-columns = data.describe(include = ['object'])
+columns = data.describe(include=['object'])
 dataset = data
 for line in columns:
     print(line)
@@ -68,10 +68,10 @@ print()
 
 new_columns = ['age', 'fare']
 dataset = data
-dataset = dataset[ (data['sex'] == 'female') & (data['survived'] == 1) ]
+dataset = dataset[(data['sex'] == 'female') & (data['survived'] == 1)]
 for word in data.columns:
     if word not in new_columns:
-        dataset=dataset.drop([word], axis=1)
+        dataset = dataset.drop([word], axis=1)
 
 print(dataset.head())
 print(dataset.apply(np.mean, axis=0).head())
@@ -80,29 +80,30 @@ print()
 
 # 6. Сделать факторизацию столбца пол (sex) с помощью функции map
 
-d_1 = {'male' : 1, 'female' : 0}
-dataset=data
+d_1 = {'male': 1, 'female': 0}
+dataset = data
 dataset['sex'] = dataset['sex'].map(d_1)
 print(dataset.head())
 
 
 # 7. Сделать факторизацию столбца пол (who) с помощью функции replace
 
-d_2 = {'child' : 2, 'man' : 1, 'woman' : 0}
-dataset = dataset.replace({'who' : d_2})
+d_2 = {'child': 2, 'man': 1, 'woman': 0}
+dataset = dataset.replace({'who': d_2})
 print(dataset.head())
 
 
 # 8. Сделать факторизацию остальных категориальных столбцов
 
 dataset = data
-categories = data.describe(include = ['object', 'bool'])
+categories = data.describe(include=['object', 'bool'])
 for line in categories:
-    dataset[line]=pd.factorize(dataset[line])[0]
+    dataset[line] = pd.factorize(dataset[line])[0]
 print(dataset.head())
 
 
-# 9. Посчитать средний возраст и средние транспортные расходы (age и fare) каждой категории пассажиров (дети, взрослые и женщины)
+# 9. Посчитать средний возраст и средние транспортные расходы (age и fare)
+# каждой категории пассажиров (дети, взрослые и женщины)
 
 data=pd.read_csv('titanic.csv')
 factors = ['age', 'fare']
