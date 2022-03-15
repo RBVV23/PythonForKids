@@ -14,9 +14,7 @@
 #       разного пола (sex) и разных классов (pclass)
 
 
-
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -25,7 +23,8 @@ pd.set_option('display.max_columns', 15)
 
 data = pd.read_csv('titanic.csv')
 
-# 1. Сгруппировать данные по классу кают (pclass) и построить обычный график для среднего возраста (age) в каждом классе и средним расходам (fare)
+# 1. Сгруппировать данные по классу кают (pclass)
+# и построить обычный график для среднего возраста (age) в каждом классе и средним расходам (fare)
 dataset = data[['pclass'] + ['age'] + ['fare']]
 dataset.groupby('pclass').agg('mean').plot()
 plt.show()
@@ -35,7 +34,8 @@ plt.show()
 dataset.groupby('pclass').agg('mean').plot(kind='bar')
 plt.show()
 
-# 3. Построить столбчатую диаграмму по данным из предыдущего пункта, добавив в группировку не только класс каюты, но и пол человека
+# 3. Построить столбчатую диаграмму по данным из предыдущего пункта,
+# добавив в группировку не только класс каюты, но и пол человека
 dataset = data[['pclass'] + ['age'] + ['fare'] + ['sex']]
 dataset.groupby(['pclass', 'sex']).agg('mean').plot(kind='bar')
 plt.show()
@@ -64,7 +64,8 @@ sns.distplot(dataset['fare'])
 plt.show()
 
 
-# 9. Построить тепловую диаграмму суммарных транспортных средств (fare) для пассажиров разного пола (sex) и разных классов (pclass)
+# 9. Построить тепловую диаграмму суммарных транспортных средств (fare)
+# для пассажиров разного пола (sex) и разных классов (pclass)
 dataset = data[['pclass'] + ['age'] + ['fare'] + ['sex']]
 
 my_heat_map = dataset.pivot_table(index='sex', columns='pclass', values='fare', aggfunc=sum).fillna(0).applymap(float)
