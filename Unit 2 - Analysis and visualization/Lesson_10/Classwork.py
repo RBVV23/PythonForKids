@@ -43,4 +43,3 @@ corr_matrix = df.drop(['state', 'international plan', 'voice mail plan', 'area c
 # print(corr_matrix)
 sns.heatmap(corr_matrix)
 plt.show()
-
