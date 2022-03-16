@@ -18,8 +18,12 @@ corr_matrix = df.drop(['state', 'international plan', 'voice mail plan', 'area c
 sns.heatmap(corr_matrix)
 plt.show()
 
-hist_columns = ['total night minutes', 'customer service calls',
-               'total day calls', 'total intl calls', 'total night calls', 'total intl minutes',
+hist_columns = ['total night minutes',
+                'customer service calls',
+                'total day calls',
+                'total intl calls',
+                'total night calls',
+                'total intl minutes',
                'account length', 'total eve calls', 'total eve minutes', 'number vmail messages',
                'total day minutes']
 
