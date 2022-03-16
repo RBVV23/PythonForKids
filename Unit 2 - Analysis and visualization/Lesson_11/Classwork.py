@@ -48,8 +48,12 @@ hist_columns = [
     'total night calls',
     'total intl minutes',
     'account length',
-    'total eve calls', 'total eve minutes', 'number vmail messages',
-    'total day minutes', 'number vmail messages']
+    'total eve calls',
+    'total eve minutes',
+    'number vmail messages',
+    'total day minutes',
+    'number vmail messages'
+                ]
 
 for column in hist_columns:
    sns.boxplot(y='churn', x=column, data=df, orient='h')
