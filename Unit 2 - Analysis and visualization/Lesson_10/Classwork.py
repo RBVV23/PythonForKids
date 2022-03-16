@@ -10,7 +10,7 @@ pd.set_option('display.width', 1000)
 data = pd.read_csv('FIFA18_Ultimate_Team_players_2.csv')
 
 
-df=data.head(1000)
+df = data.head(1000)
 
 sns.boxplot(x='overall', data=df, orient='h')
 plt.show()
