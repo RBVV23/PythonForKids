@@ -56,8 +56,8 @@ hist_columns = [
                 ]
 
 for column in hist_columns:
-   sns.boxplot(y='churn', x=column, data=df, orient='h')
-   plt.show()
+    sns.boxplot(y='churn', x=column, data=df, orient='h')
+    plt.show()
 
 print(df['customer service calls'].value_counts())
 
