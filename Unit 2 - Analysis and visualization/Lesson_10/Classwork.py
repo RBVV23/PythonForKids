@@ -16,24 +16,19 @@ sns.boxplot(x='overall', data=df, orient='h')
 plt.show()
 
 top_leagues = df['league'].value_counts().sort_values(ascending=False).head(5).index.values
-# bottom_leagues = df['league'].value_counts().sort_values(ascending=True).head(5).index.values
-# print(bottom_leagues)
 sns.boxplot(y='league', x='overall', data=df[df['league'].isin(top_leagues)], orient='h')
-# sns.boxplot(y='league', x='overall', data=df[df['league'].isin(bottom_leagues)], orient='h')
 plt.show()
 
 df = pd.read_csv('clients.csv')
 print(df.shape)
 print(df.info())
 
-# print(df['state'].value_counts())
 print(df['churn'].value_counts())
 df['churn'].value_counts().plot(kind='bar')
 plt.show()
-# print(df.corr())
+
 
 corr_matrix = df.drop(['state', 'international plan', 'voice mail plan', 'area code'], axis=1).corr()
-# print(corr_matrix)
 sns.heatmap(corr_matrix)
 plt.show()
 
