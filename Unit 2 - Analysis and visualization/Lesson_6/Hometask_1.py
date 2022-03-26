@@ -62,10 +62,10 @@ categories = data.describe(include=['object', 'bool'])
 
 for line in categories:
     print(line)
-    print('Статистика по признаку "' + str(line) + '":')
-    print('\t' + 'Уникальных значений: ' + str(categories[line][1]))
-    print('\t' + 'Наиболее частое значение: ' + str(categories[line][2]))
-    print('\t' + 'Максимальная частота встречаемости: ' + str(categories[line][3]) + '\n')
+    print(f'Статистика по признаку {line}:')
+    print(f'\tУникальных значений: {categories[line][1]}')
+    print(f'\tНаиболее частое значение: {categories[line]}')
+    print(f'\tМаксимальная частота встречаемости: {categories[line][3]}\n')
 
 
 # 4. Показать на примере столбца alive, что сумма абсолютных частот равна количеству строк в таблице
