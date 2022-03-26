@@ -20,7 +20,7 @@ print(data.head())
 
 
 # 1 Указать сколько есть признаков и информация о скольких пассажирах представлена в датасете
-print(f'Файл содержит информацию о {str(data.shape[0])} пассажирах по {data.shape[1]} признакам.')
+print(f'Файл содержит информацию о {data.shape[0]} пассажирах по {data.shape[1]} признакам.')
 
 
 # 2. Указать в каких столбцах пропущены данные и сколько
@@ -30,13 +30,13 @@ del_sum = 0
 del_info = {}
 for word in columns:
     inf = data[word].value_counts()
-    print('Признак "' + word + '" принимает ' + str(len(inf)) + ' значения(-й): ')
+    print(f'Признак {word} принимает {len(inf)} значения(-й): ')
     print(data[word].value_counts())
     num_del = data.shape[0] - sum(inf)
     if num_del != 0:
         del_info[word] = num_del
     del_sum += num_del
-    print('Содержит информацию о ' + str(sum(inf)) + ' пассажирах' + ' из ' + str(data.shape[0]) + '.')
+    print(f'Содержит информацию о {sum(inf)} пассажирах из {data.shape[0]}.')
     print('Пропущенных значений: ' + str(num_del) + ' из ' + str(data.shape[0]) + '.')
     print()
 
