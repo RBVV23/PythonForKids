@@ -37,11 +37,10 @@ for word in columns:
         del_info[word] = num_del
     del_sum += num_del
     print(f'Содержит информацию о {sum(inf)} пассажирах из {data.shape[0]}.')
-    print('Пропущенных значений: ' + str(num_del) + ' из ' + str(data.shape[0]) + '.')
+    print(f'Пропущенных значений: {num_del} из {data.shape[0]}.')
     print()
 
-print('Всего не хватает ' + str(del_sum) + ' значений из ' + str(data.shape[0]*data.shape[1]) +
-      ' (' + str(round(100*del_sum/(data.shape[0]*data.shape[1]), 1)) + ' %)')
+print(f'Всего не хватает {del_sum} значений из {data.shape[0] * data.shape[1]} ({round(100*del_sum/(data.shape[0]*data.shape[1]), 1)}%)')
 print('Отсутствующие значения по признакам: ')
 print(del_info)
 
