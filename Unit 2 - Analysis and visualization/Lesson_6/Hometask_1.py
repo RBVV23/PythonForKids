@@ -87,6 +87,8 @@ factor = 'class'
 classes = data[factor].value_counts(normalize=True)
 classes_sum = sum(classes)
 if classes_sum == 1:
+    # print(f'Сумма относительных частот {str(factor)} "{str(classes_sum}" + '" (' + str(classes_sum) + ') ' +
+    #       'отнормирована на единицу.' + '\n)
     print('Сумма относительных частот "' + str(factor) + '" (' + str(classes_sum) + ') ' +
           'отнормирована на единицу.' + '\n')
 else:
@@ -109,4 +111,3 @@ print(data.sort_values(by='pclass'))
 
 # 8. Отсортировать данные по возрастанию класса кают (pclass) и при этом по убыванию возраста пассажиров (age)
 print(data.sort_values(by=['pclass', 'age'], ascending=[True, False]))
-
