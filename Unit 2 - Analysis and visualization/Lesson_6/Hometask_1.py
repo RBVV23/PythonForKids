@@ -76,7 +76,7 @@ if alives_sum == data.shape[0]:
     print(f'Сумма абсолютных частот "{factor}" ({alives_sum}) равна количеству строк в таблице ({data.shape[0]})\n')
 else:
     print(f'Сумма абсолютных частот "{factor}" ({alives_sum}) НЕ равна количеству строк в таблице ({data.shape[0]}).')
-    print('Разность составила ' + str(data.shape[0] - alives_sum) + ' единиц.' + '\n')
+    print(f'Разность составила {data.shape[0] - alives_sum} единиц.\n')
 
 
 # 5. Показать на примере столбца class, что сумма относительных частот равна 1
