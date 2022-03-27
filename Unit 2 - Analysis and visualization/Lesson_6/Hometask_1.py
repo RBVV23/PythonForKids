@@ -40,7 +40,8 @@ for word in columns:
     print(f'Пропущенных значений: {num_del} из {data.shape[0]}.')
     print()
 
-print(f'Всего не хватает {del_sum} значений из {data.shape[0] * data.shape[1]} ({round(100*del_sum/(data.shape[0]*data.shape[1]), 1)}%)')
+print(f'Всего не хватает {del_sum} значений из {data.shape[0]*data.shape[1]} \
+                                        ({round(100*del_sum/(data.shape[0]*data.shape[1]), 1)}%)')
 print('Отсутствующие значения по признакам: ')
 print(del_info)
 
