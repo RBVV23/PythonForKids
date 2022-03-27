@@ -28,15 +28,15 @@ data_set = data[data['species'] == 1]
 # print(data_set)
 
 for line in num_factors:
-    print('Среднее значение "' + str(line) + '" среди растений со "species" равным единице: ')
-    print('\t' + str(data_set[line].mean()))
+    print(f'Среднее значение "{line}" среди растений со "species" равным единице: ')
+    print(f'\t{data_set[line].mean()}')
 
 
 # Какая средняя длина чашелистника (sepal_length) у растений вида setosa (после факторизации 0)
 
 data_set = data[data['species'] == 0]
-print('\n' + 'Среднее значение "sepal_length" у растений со "species" равным нулю:')
-print('\t' + str(data_set['sepal_length'].mean()) + '\n')
+print(f'\nСреднее значение "sepal_length" у растений со "species" равным нулю:')
+print(f'\t{data_set["sepal_length"].mean()}\n')
 
 
 # Какая средняя длина чашелистника (sepal_length) у растений вида virginica (после факторизации 2),
