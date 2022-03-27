@@ -29,7 +29,6 @@ dataset = data[['pclass'] + ['age'] + ['fare']]
 dataset.groupby('pclass').agg('mean').plot()
 plt.show()
 
-
 # 2. Построить столбчатую диаграмму по данным из предыдущего пункта
 dataset.groupby('pclass').agg('mean').plot(kind='bar')
 plt.show()
@@ -62,7 +61,6 @@ plt.show()
 dataset['fare'] = dataset['fare'].fillna(0)
 sns.distplot(dataset['fare'])
 plt.show()
-
 
 # 9. Построить тепловую диаграмму суммарных транспортных средств (fare)
 # для пассажиров разного пола (sex) и разных классов (pclass)
