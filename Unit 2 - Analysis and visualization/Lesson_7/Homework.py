@@ -30,7 +30,7 @@ pd.set_option('display.max_columns', data.shape[1])
 dataset = data[(data['sex'] == 'female') & (data['pclass'] == 1) & (data['survived'] == 1)]
 answer_1 = dataset['age'].mean()
 print(dataset.head())
-print('\n Средний возраст выживших пассажиров-женщин из 1-го класса:\t ' + str(answer_1) + '\n')
+print(f'\nСредний возраст выживших пассажиров-женщин из 1-го класса:\t {answer_1}\n')
 
 
 # 2. Вычислить, сколько выжило детей из пассажиров 3 класса (pclass = 3)
@@ -38,7 +38,7 @@ print('\n Средний возраст выживших пассажиров-ж
 dataset = data[(data['who'] == 'child') & (data['pclass'] == 3)]
 answer_2 = dataset['age'].mean()
 print(dataset.head())
-print('\n Количество выживших пассажиров-детей из 3-го класса:\t ' + str(answer_2) + '\n')
+print(f'\nКоличество выживших пассажиров-детей из 3-го класса:\t{answer_2}\n')
 
 
 # 3. Вычислить разницу между средними расходами (fare) умерших пассажиров 1 и 2 классов.
@@ -46,7 +46,7 @@ print('\n Количество выживших пассажиров-детей 
 dataset_1 = data[(data['survived'] == 0) & (data['pclass'] == 1)]
 dataset_2 = data[(data['survived'] == 0) & (data['pclass'] == 2)]
 answer_3 = dataset_1['fare'].mean() - dataset_2['fare'].mean()
-print('\n Разность между средними расходами погибших пассажиров из 1-го и 2-го классов:\t ' + str(answer_3) + '\n')
+print(f'\nРазность между средними расходами погибших пассажиров из 1-го и 2-го классов:\t{answer_3}\n')
 
 
 # 4. Удалить столбцы типа object, в которых пропущены данные
@@ -121,8 +121,7 @@ for factor in factors:
     for category in categories:
         dataset = data[data['who'] == category]
         answer = dataset[factor].mean()
-        print('Средние значение параметра "' + str(factor) + '" для категории "' + str(category)
-              + '" составляет: \t' + str(answer))
+        print(f'Средние значение параметра "{factor}" для категории "{category}" составляет: \t {answer}')
 
 
 # 10. Посчитать средний возраст и средние транспортные расходы (age и fare) каждой категории пассажиров,
