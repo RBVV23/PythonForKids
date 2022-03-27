@@ -43,8 +43,8 @@ print(f'\t{data_set["sepal_length"].mean()}\n')
 # у которых ширина чашелистника (sepal_width) меньше, чем 3.8.
 
 data_set = data[(data['species'] == 2) & (data['sepal_width'] < 3.8)]
-print('\n' + 'Среднее значение "sepal_length" у растений со "species" равным 2 и "sepal_width" меньшим 3.8:')
-print('\t' + str(data_set['sepal_length'].mean()) + '\n')
+print(f'\nСреднее значение "sepal_length" у растений со "species" равным 2 и "sepal_width" меньшим 3.8:')
+print(f'\t{data_set["sepal_length"].mean()}\n')
 
 
 # Вычислить максимальную и минимальную длину чашелистника (sepal_length)
@@ -52,10 +52,10 @@ print('\t' + str(data_set['sepal_length'].mean()) + '\n')
 # находится в пределах между 3 и 4 (то есть больше или равна 3 и при этом меньше или равна 4)
 
 data_set = data[(data['species'] == 0) & (data['sepal_width'] < 4) & (data['sepal_width'] > 3)]
-print('\n' + 'Максимальное значение "sepal_length" у растений со "species" равным 0 и "sepal_width" между 3 и 4:')
-print('\t' + str(data_set['sepal_length'].max()) + '\n')
-print('\n' + 'Минимальное значение "sepal_length" у растений со "species" равным 0 и "sepal_width" между 3 и 4:')
-print('\t' + str(data_set['sepal_length'].min()) + '\n')
+print(f'\nМаксимальное значение "sepal_length" у растений со "species" равным 0 и "sepal_width" между 3 и 4:')
+print(f'\t{data_set["sepal_length"].max()}\n')
+print(f'\nМинимальное значение "sepal_length" у растений со "species" равным 0 и "sepal_width" между 3 и 4:')
+print(f'\t{data_set["sepal_length"].min()}\n')
 
 print(data.apply(np.max))
 print(data.apply(np.min))
