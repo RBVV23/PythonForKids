@@ -86,12 +86,10 @@ classes_sum = sum(classes)
 if classes_sum == 1:
     # print(f'Сумма относительных частот {str(factor)} "{str(classes_sum}" + '" (' + str(classes_sum) + ') ' +
     #       'отнормирована на единицу.' + '\n)
-    print('Сумма относительных частот "' + str(factor) + '" (' + str(classes_sum) + ') ' +
-          'отнормирована на единицу.' + '\n')
+    print(f'Сумма относительных частот "{factor}" ({classes_sum}) отнормирована на единицу.\n')
 else:
-    print('Сумма относительных частот "' + str(factor) + '" (' + str(classes_sum) + ') ' +
-           'НЕ отнормирована на единицу.' + '\n')
-    print('Разность составила ' + str(1 - classes_sum) + '.' + '\n')
+    print(f'Сумма относительных частот "{factor}" ({classes_sum}) НЕ отнормирована на единицу.\n')
+    print(f'Разность составила {1 - classes_sum}.\n')
 
 
 # 6. Факторизовать все категориальные признаки
