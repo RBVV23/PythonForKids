@@ -12,4 +12,4 @@ for i in range(2, 10, 1):
     ham = fibo[i-2] + fibo[i-1]
     fibo.append(ham)
 
-print('Последовательность Фибоначчи: ', fibo)
+print(f'Последовательность Фибоначчи: {fibo}')
