@@ -16,8 +16,7 @@ df = data[useful_cols]
 print(df.info())
 df['league'] = pd.factorize(df['league'])[0]
 new_df = df[['cf'] + ['cb'] + ['cdm'] + ['overall'] + ['league']]
-# print(new_df.groupby('league').mean())
-# new_df.groupby('league').mean().plot()
+
 new_df.groupby('league').mean().plot(kind='bar')
 new_df.groupby('league').mean().plot(kind='area')
 new_df.groupby('league').mean().plot(kind='area', stacked=False)
