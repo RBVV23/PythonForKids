@@ -8,20 +8,7 @@
 # возвращалась бы массив строк - полученным путем разделения исходной строки.
 
 
-print('Введите строку для разделения: ')
-string = input()
-print('Введенная строка: ', string)
-
-print('Введите разделители сплошным текстом: ')
-separators_user = input()
-
-separators = []
-for i in range(len(separators_user)):
-    separators.append(separators_user[i])
-
-print('Введенные разделители: ',separators)
-
-def split(string, separators):
+def my_split(string, separators):
     word = ""
     result = []
     for symbol in string:
@@ -35,6 +22,16 @@ def split(string, separators):
     return result
 
 
-print("Результат разделения: ", split(string, separators))
+print('Введите строку для разделения: ')
+my_string = input()
+print(f'Введенная строка: {my_string}')
 
+print('Введите разделители сплошным текстом: ')
+separators_user = input()
 
+my_separators = []
+for i in range(len(separators_user)):
+    my_separators.append(separators_user[i])
+
+print(f'Введенные разделители: {my_separators}')
+print(f'Результат разделения: {my_split(my_string, my_separators)}')
