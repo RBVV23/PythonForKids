@@ -20,10 +20,10 @@ while A == B or flag == 1:
         A = (A - B) // 2
         B = A + B
 
-print('A =', A)
-print('B =', B)
+print(f'A = {A}')
+print(f'B = {B}')
 print('A > B')
 
-print('A^B = ', A**B)
-print('Остаток от деления A на B = ', A % B)
-print('Корень из B = ', m.sqrt(B))
+print(f'A^B = {A ** B}')
+print(f'Остаток от деления A на B = {A % B}')
+print(f'Корень из B = {m.sqrt(B)}')
