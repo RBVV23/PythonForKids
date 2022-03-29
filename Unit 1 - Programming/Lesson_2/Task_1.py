@@ -23,5 +23,5 @@ for i in range(10):
     if (ham % 2) == 0:
         winners += 1
     numbers.append(ham)
-print('Из шляпы вытянули номера: ', numbers)
-print('Количество победитлей: ', winners)
+print(f'Из шляпы вытянули номера: {numbers}')
+print(f'Количество победитлей: ', winners)
