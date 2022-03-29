@@ -12,8 +12,8 @@ class COURSE:
         self.number = len(self._pupils)
 
     def info(self):
-        print("Course: " + "\t\t" + self.subject)
-        print("Tutor: " + "\t\t\t" + self.tutor)
+        print(f'Course:\t\t{self.subject}')
+        print(f'Tutor:\t\t\t{self.tutor}')
         print("Number of pupils: " + "\t", self.number)
         print("Price: ", self.price)
 
