@@ -39,8 +39,8 @@ while is_continue:
             if len(book.get(word)) > max_visits:
                 max_visits = len(book.get(word))
                 max_country = word
-        print('Наиболее часто посещаемая страна: ', max_country)
-        print('Количество посещенных в ней городов:', max_visits)
+        print(f'Наиболее часто посещаемая страна: {max_country}')
+        print(f'Количество посещенных в ней городов: {max_visits}')
         print()
     elif command == 'open':
         open(book)
