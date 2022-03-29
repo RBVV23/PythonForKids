@@ -14,17 +14,17 @@ team_list = []
 def add(name, team_list):
     try:
         index = team_list.index(name)
-        print(name, ' уже есть в списке под номером ', index)
+        print(f'{name}, уже есть в списке под номером {index}')
     except ValueError:
         team_list.append(name)
-        print(name, ' успешно добавлен(-а) в список')
+        print(f'{name}, успешно добавлен(-а) в список')
     return team_list
 
 
 def remove(name, team_list):
     try:
         team_list.remove(name)
-        print(name, ' успешно удален(-а) из списка')
+        print(f'{name}, успешно удален(-а) из списка')
     except ValueError:
         print(name, ' и так не был(-а) в списках')
     return team_list
