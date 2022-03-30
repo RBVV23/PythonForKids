@@ -39,11 +39,11 @@ class CLIENT:
         print(f'Subject:\t{self.subject}')
 
     def _sp_info(self):
-        print("ID number: " + "\t" + str(self.id))
-        print("Name: " + "\t\t" + self.name)
-        print("Surname: " + "\t" + self.surname)
-        print("Subject: " + "\t" + self.subject)
-        print("Account: " + "\t", self._account)
+        print(f'ID number:\t{self.id}')
+        print(f'Name:\t\t{self.name}')
+        print(f'Surname:\t{self.surname}')
+        print(f'Subject:\t{self.subject}')
+        print(f'Account:\t{self._account}')
 
 
 def sale(pupil=CLIENT(), course=COURSE()):
