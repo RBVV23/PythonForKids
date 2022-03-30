@@ -5,7 +5,7 @@ courses = codecs.open('catalog.txt', 'r', 'utf-8')
 
 class COURSE:
     def __init__(self, subject="Сareer guidance", price=int(4500), tutor="Igor A.", pupils=[]):
-        self.subject=subject
+        self.subject = subject
         self.price = price
         self.tutor = tutor
         self._pupils = pupils
