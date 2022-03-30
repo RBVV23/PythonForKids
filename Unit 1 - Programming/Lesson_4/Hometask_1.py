@@ -51,8 +51,6 @@ def sale(pupil=CLIENT(), course=COURSE()):
     pupil.subject = course.subject
     course.number = course.number + 1
     course._pupils.append(pupil.surname)
-    # pupil._sp_info()
-    # course._sp_info()
 
 
 course_base = list()
@@ -65,7 +63,7 @@ for line in courses:
     course.subject = words[0]
     course.price = int(words[1])
     course.number = int(words[2])
-    course.tutor = str(words[3]) + " " + str(words[4])
+    course.tutor = f'{words[3]} {words[4]}'
     course_base.append(course)
 
 i = 0
@@ -77,7 +75,6 @@ for line in clients:
     student.id = i
     student.name = words[0]
     student.surname = words[1]
-    # student.info()
     client_base.append(student)
 
 
