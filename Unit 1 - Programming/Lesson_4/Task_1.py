@@ -25,10 +25,10 @@ class Auto:
         print("Model is successfully changed")
 
     def tell(self):
-        print("Car is ", self)
-        print("Color is ", self.color)
-        print("Model is " + self.model)
-        print("Maximum speed is " + str(self.speed))
+        print(f'Car is {self}')
+        print(f'Color is {self.color}')
+        print(f'Model is {self.model}')
+        print(f'Maximum speed is {self.speed}')
 
 
 my_auto_1 = Auto()
