@@ -65,16 +65,16 @@ class Auto:
         self._transmission = new_transmission
 
     def tell(self):
-        print("Car is ", self)
-        print("Color is ", self.color)
-        print("Model is " + self.model)
-        print("Maximum speed is " + str(self.speed))
-        print("Wheels formula is ", self.wheels)
-        print("Wipers formula is ", self.wipers)
-        print("Seats formula is ", self.seats)
-        print("Motor is ", self.get_motor())
-        print("Win number is ", self.get_win())
-        print("Transmission is ", self.get_transmission())
+        print(f'Car is {self}')
+        print(f'Color is {self.color}')
+        print(f'Model is {self.model}')
+        print(f'Maximum speed is {self.speed}')
+        print(f'Wheels formula is {self.wheels}')
+        print(f'Wipers formula is {self.wipers}')
+        print(f'Seats formula is {self.seats}')
+        print(f'Motor is {self.get_motor()}')
+        print(f'Win number is {self.get_win()}')
+        print(f'Transmission is {self.get_transmission()}')
 
 
 my_auto_1 = Auto()
