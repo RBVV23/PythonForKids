@@ -14,14 +14,14 @@ class COURSE:
     def info(self):
         print(f'Course:\t\t{self.subject}')
         print(f'Tutor:\t\t\t{self.tutor}')
-        print("Number of pupils: " + "\t", self.number)
-        print("Price: ", self.price)
+        print(f'Number of pupils:\t{self.number}')
+        print(f'Price: {self.price}')
 
     def _sp_info(self):
-        print("Course: " + "\t\t" + self.subject)
-        print("Tutor: " + "\t\t\t" + self.tutor)
-        print("Number of pupils: ", "\t", self.number)
-        print("List of pupils: ", self._pupils)
+        print(f'Course:\t\t{self.subject}')
+        print(f'Tutor:\t\t\t{self.tutor}')
+        print(f'Number of pupils:\t{self.number}')
+        print(f'List of pupils: {self._pupils}')
 
 
 class CLIENT:
@@ -34,7 +34,7 @@ class CLIENT:
 
     def info(self):
         # print("ID number: " + "\t" + str(self.id))
-        print("Name: " + "\t\t" + self.name)
+        print(f'Name:\t\t{self.name}')
         print("Surname: " + "\t" + self.surname)
         print("Subject: " + "\t" + self.subject)
 
