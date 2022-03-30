@@ -36,15 +36,15 @@ class Auto:
 
     def change_wheel(self, new_wheel, number):
         self.wheels[number] = new_wheel
-        print("Wheel #", str(number+1), " is successfully changed")
+        print(f'Wheel #{number + 1} is successfully changed')
 
     def change_wiper(self, new_wiper, number):
         self.wipers[number] = new_wiper
-        print("Wiper #", str(number+1), " is successfully changed")
+        print(f'Wiper #{number + 1} is successfully changed')
 
     def change_seat(self, new_seat, number):
         self.seats[number] = new_seat
-        print("Seat #", str(number+1), " is successfully changed")
+        print(f'Seat #{number + 1} is successfully changed')
 
     def get_motor(self):
         return self._motor
