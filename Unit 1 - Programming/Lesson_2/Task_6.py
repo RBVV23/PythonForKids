@@ -61,7 +61,7 @@ def res(inpt):
 def help():
     print('Бот умеет выполнять следующие команды:')
     for i in range(len(command_list)):
-        print('"' + command_list[i] + '"' + ' - ' + help_list[i])
+        print(f'"{command_list[i]}" - {help_list[i]}')
     print()
     print('*команды вводятся без кавычек')
     print()
@@ -86,7 +86,7 @@ while flag != 0:
             ham = command[4:len(command)]
             arg = int(ham)
         else:
-            print('Вы не ввели аргумент для функции ', command[0:3], ', введите число:')
+            print(f'Вы не ввели аргумент для функции {command[0:3]}, введите число:')
             arg = int(input())
         number = add(arg, number)
     elif command[0:3] == 'sub':
@@ -94,7 +94,7 @@ while flag != 0:
             ham = command[4:len(command)]
             arg = int(ham)
         else:
-            print('Вы не ввели аргумент для функции ', command[0:3], ', введите число:')
+            print(f'Вы не ввели аргумент для функции {command[0:3]}, введите число:')
             arg = int(input())
         number = sub(arg, number)
     elif command == 'res':
