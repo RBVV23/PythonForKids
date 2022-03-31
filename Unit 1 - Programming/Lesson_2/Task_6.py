@@ -38,12 +38,12 @@ def google():
     result = 'https://www.google.ru/search?q='
     for i in range(len(words)):
         result = result + words[i] + '%20'
-    print('Ваш поисковый запрос: ' + result)
+    print(f'Ваш поисковый запрос: {result}')
 
 
 def add(inpt, number):
     result = number + inpt
-    print(f'add {inpt} =  {result}')
+    print(f'add {inpt} = {result}')
     return result
 
 
