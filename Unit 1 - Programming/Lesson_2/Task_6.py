@@ -37,7 +37,7 @@ def google():
     words = string.split(' ')
     result = 'https://www.google.ru/search?q='
     for i in range(len(words)):
-        result = result + words[i] + '%20'
+        result += words[i] + '%20'
     print(f'Ваш поисковый запрос: {result}')
 
 
