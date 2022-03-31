@@ -102,5 +102,5 @@ while flag != 0:
     elif command == 'q':
         flag = 0
     else:
-        print('Прости, но я не знаю такой команды "' + command + '"')
+        print(f'Прости, но я не знаю такой команды "{command}"')
 print('Заверешние работы бота')
