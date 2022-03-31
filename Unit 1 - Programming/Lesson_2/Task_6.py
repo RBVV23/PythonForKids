@@ -43,19 +43,19 @@ def google():
 
 def add(inpt, number):
     result = number + inpt
-    print('add ', inpt, ' = ', result)
+    print(f'add {inpt} =  {result}')
     return result
 
 
 def sub(entering, number):
     result = number - entering
-    print('sub', entering, ' = ', result)
+    print(f'sub {entering} = {result}')
     return result
 
 
 def res(inpt):
     result = inpt
-    print('Промежуочный результат: ', result)
+    print(f'Промежуочный результат: {result}')
 
 
 def help():
