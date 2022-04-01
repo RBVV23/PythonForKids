@@ -19,8 +19,8 @@ book['Germany'] = ['Munich', 'Frankfurt', 'Dresden']
 
 def open(book):
     for word in book.keys():
-        print('Страна: ', word)
-        print('Города: ', book.get(word))
+        print(f'Страна:  {word}')
+        print(f'Города: {book.get(word)}')
         print()
 
 
