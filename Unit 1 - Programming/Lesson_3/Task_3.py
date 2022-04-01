@@ -26,6 +26,8 @@ def open(book):
 
 is_continue = True
 
+max_country = 'Undefined'
+
 while is_continue:
     print('Введите страну и город через пробел (или команду): ')
     command = input(str())
