@@ -7,10 +7,10 @@
 
 print('Введите номер поезда: ')
 number = int(input())
-print('Номер поезда: ', number)
+print(f'Номер поезда: {number}')
 result = 0
 while number > 0:
     number = number//10
     result = result + 1
 
-print('В поезде: ', result, ' вагона(-ов)')
+print(f'В поезде: {result} вагона(-ов)')
