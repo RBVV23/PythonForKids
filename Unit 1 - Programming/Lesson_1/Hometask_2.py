@@ -19,4 +19,4 @@ for i in range(ones):
 
 for i in range(zeros):
     ST = ST + '0'
-print('Щифрованный текст: ', ST)
+print(f'Шифрованный текст: {ST}')
