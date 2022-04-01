@@ -33,7 +33,6 @@ class CLIENT:
         self.subject = subject
 
     def info(self):
-        # print("ID number: " + "\t" + str(self.id))
         print(f'Name:\t\t{self.name}')
         print(f'Surname:\t{self.surname}')
         print(f'Subject:\t{self.subject}')
