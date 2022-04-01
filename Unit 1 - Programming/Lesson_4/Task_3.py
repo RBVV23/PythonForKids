@@ -19,11 +19,11 @@ class Helmet:
 
     def set_model(self, new_model):
         self._model = new_model
-        print("Model is successfuly changed")
+        print("Model is successfully changed")
 
     def tell(self):
-        print(f'Model of this Helmet is {self._model}')
-        print(f'This Helmet is {self.color}')
+        print(f'Model of this helmet is {self._model}')
+        print(f'This helmet is {self.color}')
 
 
 class Elbowpad:
