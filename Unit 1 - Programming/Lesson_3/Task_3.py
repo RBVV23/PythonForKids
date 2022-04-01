@@ -46,7 +46,7 @@ while is_continue:
         open(book)
     elif command == 'exit':
         is_continue = 0
-    elif book.get(country) == None:
+    elif book.get(country) is None:
         book[country] = [city]
     else:
         city_list = book.get(country)
