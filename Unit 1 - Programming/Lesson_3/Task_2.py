@@ -26,7 +26,7 @@ def remove(name, team_list):
         team_list.remove(name)
         print(f'{name}, успешно удален(-а) из списка')
     except ValueError:
-        print(f'{name},  и так не был(-а) в списках')
+        print(f'{name}, и так не был(-а) в списках')
     return team_list
 
 
