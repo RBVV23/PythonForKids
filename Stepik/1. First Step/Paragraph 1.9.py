@@ -137,3 +137,13 @@ print(sum)
 
 
 # ---------------------------------------------
+
+
+n = int(input())
+numbers = [int(i) for i in input().split()]
+
+sum = 0
+for i in range(n):
+    sum += numbers[i]
+
+print(sum)
