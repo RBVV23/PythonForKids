@@ -20,7 +20,7 @@ for color in 'red', 'yellow', 'green':
 # >>> green
 
 # Универсальное решение
-numbers = [ int(i) for i in input().split() ]
+numbers = [int(i) for i in input().split()]
 print(numbers)
 # введите числовой ряд, например:
 # 2 33 34 25 15 23
@@ -32,12 +32,7 @@ numbers = list(map(int, message.split()))
 print(numbers)
 
 
-numbers = list(map(int, input().split()))
-print(numbers)
-# введите числовой ряд, например:
-# 2 33 34 25 15 23
-
-
+# варианты использования оператора split() с параметром:
 message = "2,33,34,25,15,23" # если в конце строки нет символа перевода строки \n
 numbers = message.split(",")
 print(numbers) # ['2', '33', '34', '25', '15', '23']
