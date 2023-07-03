@@ -19,6 +19,12 @@ for color in 'red', 'yellow', 'green':
 # >>> yellow
 # >>> green
 
+# Универсальное решение
+numbers = [ int(i) for i in input().split() ]
+print(numbers)
+# введите числовой ряд, например:
+# 2 33 34 25 15 23
+
 
 message = "2 33 34 25 15 23"
 numbers = list(map(int, message.split()))
