@@ -26,6 +26,7 @@ print(numbers)
 # 2 33 34 25 15 23
 
 
+# С использованием функции map()
 message = "2 33 34 25 15 23"
 numbers = list(map(int, message.split()))
 print(numbers)
