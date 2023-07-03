@@ -20,6 +20,12 @@ for color in 'red', 'yellow', 'green':
 # >>> green
 
 
+numbers = list(map(int, input().split()))
+print(numbers)
+# введите числовой ряд, например:
+# 2 33 34 25 15 23
+
+
 message = "2,33,34,25,15,23" # если в конце строки нет символа перевода строки \n
 numbers = message.split(",")
 print(numbers) # ['2', '33', '34', '25', '15', '23']
