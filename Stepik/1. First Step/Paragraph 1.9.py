@@ -47,6 +47,7 @@ for i in d:
 print(max)
 
 
+# ---------------------------------------------
 
 
 # put your python code here
@@ -58,3 +59,18 @@ for i in d:
     sum += int(i)
 
 print(sum)
+
+
+# ---------------------------------------------
+
+
+n = int(input())
+
+sum = 0
+for i in range(n):
+    sum += int(input())
+
+print(sum)
+
+
+
