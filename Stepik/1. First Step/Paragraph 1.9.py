@@ -76,5 +76,16 @@ print(sum)
 # ---------------------------------------------
 
 
+# put your python code here
+n = int(input())
+sum = 0
+while True:
+    r = n % 10
+    sum += r
+    n //= 10
+    if n == 0:
+        break
+print(sum)
+
 
 # ---------------------------------------------
