@@ -20,6 +20,27 @@ for color in 'red', 'yellow', 'green':
 # >>> green
 
 
+message = "2,33,34,25,15,23" # если в конце строки нет символа перевода строки \n
+numbers = message.split(",")
+print(numbers) # ['2', '33', '34', '25', '15', '23']
+
+message = "2,33,34,25,15,23\n" # если в конце строки есть символ перевода строки \n, используем метод strip()
+numbers = message.strip().split(",")
+print(numbers) # ['2', '33', '34', '25', '15', '23']
+
+message = "2,33,34,25,      15,23"
+numbers = message.strip().split(",")
+print(numbers) # ['2', '33', '34', '25', '      15', '23']
+
+message = "2,33,     34,25,      15,23"
+numbers = [ int(i) for i in message.split(",") ]
+# лишние пробелы не влияют на преобразование
+print(numbers) # [2, 33, 34, 25, 15, 23]
+
+message = "2.33, 34.25, 15"
+numbers = [ float(i) for i in message.split(",") ]
+print(numbers) # [2.33, 34.25, 15.0]
+
 # ---------------------------------------------
 
 
@@ -95,7 +116,7 @@ n = 1
 sum = 0
 while n:
     n = int(input())
-    if (n % 2 == 0):
+    if n % 2 == 0:
         sum += n
 
 print(sum)
