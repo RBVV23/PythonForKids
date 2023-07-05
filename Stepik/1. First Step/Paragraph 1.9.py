@@ -28,6 +28,18 @@ d = [12, 17, 45, 28, 75]
 
 sum = 0
 for i in d:
-    sum += i;
+    sum += i
 
 print(sum)
+
+
+
+d = [12, 17, 45, 28, 75, 55, 18]
+# напишите программный код, использующий цикл for
+
+max = d[0]
+for i in d:
+    if i >= max:
+        max = i
+
+print(max)
