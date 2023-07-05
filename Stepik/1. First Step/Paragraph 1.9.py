@@ -11,3 +11,10 @@ for i in "123":
 # >>> 1
 # >>> 4
 # >>> 9
+
+for color in 'red', 'yellow', 'green':
+    print(color)
+
+# >>> red
+# >>> yellow
+# >>> green
