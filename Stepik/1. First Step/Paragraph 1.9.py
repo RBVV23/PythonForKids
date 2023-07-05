@@ -45,3 +45,16 @@ for i in d:
         max = i
 
 print(max)
+
+
+
+
+# put your python code here
+
+d = input()
+
+sum = 0
+for i in d:
+    sum += int(i)
+
+print(sum)
