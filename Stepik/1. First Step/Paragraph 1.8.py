@@ -35,3 +35,12 @@ print(c)
 # >>> '3'
 print(int(c))
 # >>> 3
+
+
+# Дана строка (три числа, разделенные пробелом)
+# 1 2 3
+a, b, c = input().split()
+a = int(a)
+b = int(b)
+c = int(c)
+print(a + b + c)
