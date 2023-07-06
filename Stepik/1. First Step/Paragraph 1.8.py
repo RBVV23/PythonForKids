@@ -39,7 +39,7 @@ print(int(c))
 
 # Дана строка (три числа, разделенные пробелом)
 # 1 2 3
-a, b, c = input().split()
+a, b, c = input('Введите: "1 2 3"\n').split()
 a = int(a)
 b = int(b)
 c = int(c)
@@ -80,3 +80,17 @@ print(list(range(5)))  # функция range(star, finish, step) - создае
 # >>> [0, 1, 2, 3, 4]
 print(list(map(int, "1 2 3 4 5".split())))
 # >>> [1, 2, 3, 4, 5]
+
+
+# Дана строка (три числа, разделенные пробелом)
+# 5 7 10
+a, b, c = map(int, input('Введите: "5 7 10"\n').split())  # этот пример уже был
+n = list(map(int, input('Введите: "5 7 10"\n').split()))  # создается список (таблица)
+a, b, c = n = list(map(int, input('Введите: "5 7 10"\n').split()))  # две предыдущие строки в Python можно объединить
+print(n)  # [5, 7, 10]
+print(n[0])  # 5
+print(n[1])  # 7
+print(n[2])  # 10
+print(a)  # 5
+print(b)  # 7
+print(c)  # 10
