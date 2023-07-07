@@ -5,6 +5,6 @@
 '''
 a = int(input())
 b = input()
-print ('a * "b" = {}'.format(a * b))
-print ('a * b = {}'.format(a * int(b)))
-print ('a * "b" = {0}; a * b = {1}'.format(format(a * b), a * int(b)))
+print('a * "b" = {}'.format(a * b))
+print('a * b = {}'.format(a * int(b)))
+print('a * "b" = {0}; a * b = {1}'.format(format(a * b), a * int(b)))
