@@ -22,3 +22,16 @@ x = int(input())
 y = int(input())
 
 print(ceil(y / x))
+
+
+# put your python code here
+
+a = int(input())
+b = int(input())
+n = int(input())
+
+roubles = (a * n) + (b * n) // 100
+pennies = (b * n) % 100
+
+print(roubles)
+print(pennies)
