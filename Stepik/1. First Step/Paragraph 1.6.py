@@ -42,3 +42,10 @@ print(pennies)
 
 # ---------------------------------------------
 
+
+# put your python code here
+S = int(input())
+D = 1 + 8 * S
+n = (D**0.5 - 1)/2
+
+print(int(n))
