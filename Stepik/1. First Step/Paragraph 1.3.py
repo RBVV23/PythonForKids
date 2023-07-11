@@ -58,3 +58,10 @@ print("a ** b = ", a ** b) # a в степени b
 print("a + b * a = ", a + b * a)
 print("(a + b) * a = ", (a + b) * a)
 print((a ** 2 + b ** 2) ** 0.5) # квадратный корень из суммы квадратов
+
+python_3_8 = "Язык программировния"
+velocity101 = 101
+skorost101 = 101
+true = True
+true1 = 1
+dog = "Rex"
