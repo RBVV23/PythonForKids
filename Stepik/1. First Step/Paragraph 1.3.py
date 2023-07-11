@@ -89,12 +89,12 @@ print(b)
 
 
 a = 10
-print(id(a))
-print(id(10))
-print(id(2 + 3))
-print(id(5 + 5))
+print(id(a))  # 140736317433936
+print(id(10))  # 140736317433936
+print(id(2 + 3))  # 140736317433776
+print(id(5 + 5))  # 140736317433936
 b = a
-print(id(b))
+print(id(b))  # 140736317433936
 a = 5
-print(id(a))
-print(id(b))
+print(id(a))  # 140736317433776
+print(id(b))  # 140736317433936
