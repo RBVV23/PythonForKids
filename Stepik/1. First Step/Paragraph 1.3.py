@@ -86,3 +86,15 @@ print(a)
 print(b)
 # >>> b
 # 5
+
+
+a = 10
+print(id(a))
+print(id(10))
+print(id(2 + 3))
+print(id(5 + 5))
+b = a
+print(id(b))
+a = 5
+print(id(a))
+print(id(b))
