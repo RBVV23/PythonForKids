@@ -60,8 +60,14 @@ print("(a + b) * a = ", (a + b) * a)
 print((a ** 2 + b ** 2) ** 0.5) # квадратный корень из суммы квадратов
 
 python_3_8 = "Язык программировния"
+print(python_3_8)
 velocity101 = 101
+print(velocity101)
 skorost101 = 101
+print(skorost101)
 true = True
+print(true)
 true1 = 1
+print(true1)
 dog = "Rex"
+print(dog)
