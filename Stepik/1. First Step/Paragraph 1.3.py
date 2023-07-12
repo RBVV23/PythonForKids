@@ -130,3 +130,8 @@ print(type(a))
 a = float(a)
 print(a)
 print(type(a))
+
+h = 5
+m = 30
+print(str(h) + " часов " + str(m) + " минут")
+print(f'{h} часов {m} минут')
