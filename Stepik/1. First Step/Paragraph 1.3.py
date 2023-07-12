@@ -116,5 +116,7 @@ print(id(b))  # 140736317433936
 # ---------------------------------------------
 
 
-print(int(float("5.5")))
+print(int(float("5.4")))
+print(int(float("5.9")))
+print(int(5.4))
 print(int(5.9))
