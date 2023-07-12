@@ -120,3 +120,13 @@ print(int(float("5.4")))
 print(int(float("5.9")))
 print(int(5.4))
 print(int(5.9))
+
+a = "4"
+print(a)
+print(type(a))
+a = int(a)
+print(a)
+print(type(a))
+a = float(a)
+print(a)
+print(type(a))
