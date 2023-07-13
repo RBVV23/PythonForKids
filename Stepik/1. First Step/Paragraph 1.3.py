@@ -154,3 +154,9 @@ print(round(4.5554, 3))
 # >>> 4.555
 print(round(4.4445, 3))
 # >>> 4.444
+
+import math
+a = math.ceil(2.5) # округление вверх
+print(a)
+b = math.floor(3.3) # округление вниз
+print(b)
