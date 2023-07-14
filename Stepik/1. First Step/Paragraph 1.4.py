@@ -49,3 +49,12 @@ print(answer)
 # ---------------------------------------------
 
 
+# put your python code here
+m = int(input())
+n = int(input())
+
+board = 2 * m + 2 * n
+hor_rails = (m - 1) * n
+ver_rails = (n - 1) * m
+result = board + hor_rails + ver_rails
+print(result)
