@@ -23,9 +23,17 @@ print(round(S, 3))
 
 
 # put your python code here
-
 a = int(input())
 S = 3 * a**2 + a**2 * 3**0.5 / 4
+print(round(S, 3))
+
+
+# ---------------------------------------------
+
+
+# put your python code here
+a = int(input())
+S = 6 * (a**2 + a**2 * 3**0.5 / 4)
 print(round(S, 3))
 
 
