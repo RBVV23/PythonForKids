@@ -94,3 +94,12 @@ else:
     print("NO")
 
 
+n = int(input())
+if 100 <= n <= 999:
+    sum = (n % 10) + (n // 100) + ((n // 10) % 10)
+    if (sum % 2) == 0:
+        print("YES")
+else:
+    print("NO")
+
+
