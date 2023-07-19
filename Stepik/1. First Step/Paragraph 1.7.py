@@ -195,3 +195,23 @@ mx = max(a, b, c)
 md = a + b + c - mx - mn
 
 print(mn, md, mx, sep='\n')
+
+
+# ---------------------------------------------
+
+
+min = int(input())
+
+b = int(input())
+if b <= min:
+    min = b
+
+c = int(input())
+if c <= min:
+    min = c
+
+d = int(input())
+if d <= min:
+    min = d
+
+print(min)
