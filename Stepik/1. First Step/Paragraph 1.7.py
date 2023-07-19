@@ -177,10 +177,21 @@ print(a, b, c)
 a = int(input())
 b = int(input())
 c = int(input())
-mx = max(a,b,c)  # встроенная функция находит максимальное число
-mn = min(a,b,c)  # встроенная функция находит минимальное число
+mx = max(a, b, c)  # встроенная функция находит максимальное число
+mn = min(a, b, c)  # встроенная функция находит минимальное число
 av = (a + b + c) - (mx + mn)
 print(mn, av, mx)
 
 
 # ---------------------------------------------
+
+
+a = int(input())
+b = int(input())
+c = int(input())
+
+mn = min(a, b, c)
+mx = max(a, b, c)
+md = a + b + c - mx - mn
+
+print(mn, md, mx, sep='\n')
