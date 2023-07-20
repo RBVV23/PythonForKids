@@ -13,3 +13,9 @@ print(d[0] + d[1] + d[2] + d[3])
 # >>> 10
 print(sum(d))
 # >>> 10
+
+print("one two three".split())
+# >>> ['one', 'two', 'three']
+s = "one two three"
+print(s.split())
+# >>> ['one', 'two', 'three']
