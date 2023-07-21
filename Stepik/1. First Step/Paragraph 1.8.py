@@ -158,3 +158,16 @@ else:
 # ---------------------------------------------
 
 
+a, b, c = map(int, input().split())
+if (a + b > c) and (a + c > b) and (b + c > a):
+    hypotenuse = max(a, b, c)
+    leg_1 = min(a, b, c)
+    leg_2 = (a + b + c) - hypotenuse - leg_1
+    if leg_1**2 + leg_2**2 == hypotenuse**2:
+        print('right')
+    elif leg_1**2 + leg_2**2 > hypotenuse**2:
+        print('acute')
+    else:
+        print('obtuse')
+else:
+    print('impossible')
