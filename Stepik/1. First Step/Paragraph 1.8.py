@@ -121,3 +121,12 @@ if (a + b > c) and (a + c > b) and (b + c > a):
     print('YES')
 else:
     print('NO')
+
+
+
+A, B = map(int, input().split())
+C, D = map(int, input().split())
+if (A <= C <= B) or (A <= D <= B):
+    print('YES')
+else:
+    print('NO')
