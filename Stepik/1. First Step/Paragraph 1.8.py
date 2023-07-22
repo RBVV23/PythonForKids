@@ -94,3 +94,7 @@ print(n[2])  # 10
 print(a)  # 5
 print(b)  # 7
 print(c)  # 10
+
+
+a, b = map(int, input().split())
+print(a + b)
