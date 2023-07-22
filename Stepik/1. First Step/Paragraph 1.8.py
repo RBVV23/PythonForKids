@@ -111,3 +111,11 @@ if (x1 == x2) or (y1 == y2):
     print('YES')
 else:
     print('NO')
+
+
+
+a, b, c = map(int, input().split())
+if (a + b > c) and (a + c > b) and (b + c > a):
+    print('YES')
+else:
+    print('NO')
